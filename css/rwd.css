@@ -1,0 +1,516 @@
+
+@media screen and (max-width:1800px){
+.containerX { max-width:90% !important;}
+}
+@media screen and (max-width:1540px){
+#bannerSlider .item .position-absolute span {  margin-top: 5%;}	
+.rollcoBest {-webkit-clip-path: polygon(50% 0, 100% 15%, 100% 100%, 0 100%, 0 15%);  clip-path: polygon(50% 0, 100% 15%, 100% 100%, 0 100%, 0 15%);}
+#abouUs .item .position-absolute span { margin-top: 80px;}
+.containerX {max-width:100% !important;}
+.thumb-box a .thumb-overlay{top:6%;}
+}
+
+@media screen and (max-width:1366px){
+nav .nav li a {padding: 5px 14px;}
+.h1, h1 {font-size:2rem;}
+#bannerSlider{background: #ef4135; margin-top:-120px; height:65vh;min-height:600px;}
+header.topSol{padding:10px 0px; position:relative;/* z-index:99; */background-color:#fff}
+nav { padding:15px 0px;}
+#bannerSlider .item .position-absolute span {  margin-top:3%; font-size:18px;}	
+header.topSol .solRig a { padding-top:5px;}
+header.topSol .solRig img { max-width: 25px;}
+#bannerSlider .item .position-absolute h2 { font-size:3rem; line-height:45px}
+#bannerSlider .item .position-absolute h2, #abouUs .item .position-absolute h2, .subHead h2{font-size:3rem; line-height:45px}
+#bannerSlider::before {bottom: -18%;}
+#bannerSlider.owl-theme .owl-dots{bottom:80px;}
+.rollcoPart .row  > .col-6.text-center{ padding-top:0px!important; margin-top:-20px;}
+.font16 { font-size:15px;}
+.display-4 { font-size:3rem;}
+#abouUs .item .position-absolute span { margin-top: 50px;}
+.ourPromi .font12 {  font-size:11px;line-height:1.2; margin-bottom:10px!important}
+.h3, h3 { font-size: 1.2rem;}
+.pb-200{ padding-bottom:100px!important;}
+.padB200{ padding-bottom:100px}
+.padB100{ padding-bottom:50px}
+.padT100{ padding-top:50px}
+.contMenu { margin-top: -120px;}
+.contMenu .row.pt-5{ padding-top:0px!important;} 
+.thumb-box a .thumb-overlay{top:4%;}
+}
+
+@media screen and (max-width:1280px){
+.containerX {max-width:100% !important;}
+}
+
+
+@media screen and (max-width:1260px){
+.nav li a {padding: 5px 18px; }
+#abouUs::before {display: none;}
+.whyYouCan{padding-top:50px;}
+
+}
+
+
+
+
+@media screen and (max-width:1200px){
+nav .nav li a {padding: 5px 12px; font-size:12px;}
+#bannerSlider .item .position-absolute h2, .subHead h2,#abouUs .item .position-absolute h2 { font-size: 2rem; line-height:30px;}
+#bannerSlider .item .position-absolute h2 hr, #abouUs .item .position-absolute h2 hr, .subHead h2 hr { margin:8px 0px!important;}
+#abouUs .item .position-absolute span {  margin-top:50px;}
+#bannerSlider .item .position-absolute span {  margin-top:3%;}
+.best-choice {bottom: 0px;}	
+}
+
+@media screen and (max-width:1160px){
+.nav li a {padding: 5px 12px; font-size:12px;}
+.rollcoPartsf .rollcoPartRi .nav-tabs .nav-link {font-size: 12px;}
+#abouUs, #bannerSlider{height:auto;min-height:inherit;}
+}
+@media screen and (max-width:1100px){
+.logo img{ max-width:110px; width:100%; height:auto}
+nav { padding:10px 0px;}
+header.topSol {padding:15px 0px 10px;}
+.navbar-expand-lg .navbar-nav {padding-top: 14px;}
+.padT151{padding-top:65px;}
+.ourHistory .nav li a {    padding: 11px 13px;}
+.thankYou h2{ line-height:55px;}
+.subHead h2.electri {    font-size: 35px; line-height: 45px;}
+.mbrContArea .font18 {    font-size: 13px;}
+.contMenu h4  {font-size:16px !important;}
+.creatAccouText label{font-size:12px;}
+.vehicLook label{  font-size:13px; }
+.padB200 {padding-bottom: 136px;}
+.navTabs .nav-tabs .nav-item.show .nav-link, .navTabs .nav-tabs .nav-link{font-size:15px;}
+.topHeader .nav li a{padding: 5px 14px;}
+.topHeader .nav ul.posLogNav li.myCart a{padding-right:0px; padding-left:50px;} 
+/*.topHeader nav {height: 100%;}*/
+/*.topHeader.stick nav.christmas {background-position: 7% top, right top;}*/ 
+#bannerSlider .mt-auto {margin-top: 100px !important;}
+#bannerSlider.owl-theme .owl-dots {bottom: 126px;}
+.contMenuBg {padding-top: 30px;}
+.logo img {max-width: 70px; vertical-align: top;}
+.posLogNav { margin-right:0px;}
+}
+
+@media screen and (max-width:1024px){
+#bannerSlider{ background-color:transparent; background:none;}
+#bannerSlider::before{background:none;}
+.rollcoPart .row > .col-6.text-center{padding-top:30px !important; margin-top:0px;}
+.rollcoPart h1{ font-size:20px;}
+.accRedi h2{font-size:20px; line-height:30px;}
+.accRedi h3{font-size:16px;}
+.mbrContArea h2.text-white{font-size:22px;}
+.nav li a{padding:5px 10px;}
+.bannerSlide {    margin-top: 117px;}
+#bannerSlider.owl-theme .owl-dots {bottom:20px;}
+.rollcoPart .input-field input[type="text"] {    width: calc(100% - 200px);}
+.p-2.bg-danger{padding:0px !important;}
+.rollcoPartsf .rollcoPartRi .nav-tabs .nav-link{ font-size: 14px; }
+.vehicLookup .table td, .vehicLookup .table th {   white-space: nowrap;}
+
+}
+
+@media screen and (max-width:991px){
+.navabarAll{position:relative;}
+.navabarAll .navbar-toggler-right{position:absolute; right:15px; top:0px; display:inline-block;}
+.form-group.has-search.mb-0.mr-5{margin-right:15px !important;}
+.navabarAll .align-self-center.float-right.d-flex.ml-auto{margin-right:60px;}
+.navbar-nav{float:right; margin-top:20px; margin-bottom:50px;}
+.navbar-collapse {    -ms-flex-preferred-size: 100%;    flex-basis: 100%;    -ms-flex-positive: 1;    flex-grow: 1;    -ms-flex-align: center;    align-items: center;    position: absolute;    width: 125%;    background-color: #fff; z-index:-1; right:0; }
+.navbar-expand-lg > .container, .navbar-expand-lg > .container-fluid {    padding-right:15px !important;    padding-left: 15px !important;}
+.navbar-expand-lg .navbar-nav {padding-top: 35px;}
+.nav li a{padding:10px 6px;}
+#bannerSlider.owl-theme .owl-dots{bottom:20px;}
+#bannerSlider .item .position-absolute span{ font-size:14px; margin-top:2%;}
+/*.rollcoPartRi  .nav-tabs.nav li a{font-size: 14px;color: #000000!important;}
+.rollcoPartRi .nav-tabs .nav-item.show .nav-link, .rollcoPartRi .nav-tabs .nav-link.active{background-color:#ef4135; color: #fff!important;}
+.rollcoPartRi .nav-tabs .nav-item.show .nav-link:hover, .rollcoPartRi .nav-tabs .nav-link:hover{background-color:#ef4135}*/
+.rollcoPartRi .nav-tabs .nav-link.active{background-color:transparent !important;}
+.rollcoPartRi .nav-tabs .nav-link { padding:5px; font-weight:600;}
+.rollcoPartRi .nav-tabs .nav-item.active{background-color:#ef4135; }
+.rollcoPartRi .nav-tabs .nav-item.active a{color:#fff;}
+.rollcoPartRi .nav-tabs .nav-item:hover{background-color:#ef4135; }
+.rollcoPartRi .nav-tabs .nav-item:hover a{color:#fff;}
+.rollcoPartRi .nav-tabs .nav-item.show .nav-link:hover, .rollcoPartRi .nav-tabs .nav-link:hover{background-color:transparent !important;}
+.rollcoPartRi .nav-tabs .nav-link {border: 0px solid transparent; border-top-color: transparent; border-right-color: transparent; border-bottom-color: transparent; border-left-color: transparent;    border-top-left-radius:0rem; border-top-right-radius:0rem;}
+.subHead.thankYou h2{ font-size:30px  !important; line-height:46px !important;}
+.subHead h2.electri {    font-size: 30px; line-height: 40px;}
+.rollcoPartsf .h2 {font-size: 23px;}
+.someRollco h2.text-white {    font-size: 28px;}
+#bannerSlider.owl-theme .owl-dots {    bottom:60px;}
+.logNav ul li {font-size: 14px;height: 4vh;}
+.someRollco .p-45{padding:30px 15px;}
+.someRollco .p-2.bg-danger{padding:10px !important;}
+.callAnsw .col-lg-2{-ms-flex: 0 0 33%;flex: 0 0 33%;max-width: 33%;} 
+.topHeader .nav ul.posLogNav li a {color: #000000 !important;     display: block;    padding: 12px 15px;    font-size: 12px;    text-decoration: none;}
+.topHeader .nav ul.posLogNav li a:hover{ background-color:transparent;}
+.topHeader .nav ul.posLogNav li a:hover{ text-decoration:underline;}
+.topHeader .nav ul.posLogNav  li a.active, .topHeader .nav ul.posLogNav  li a:hover {background-color: transparent;}  
+.mb-6 {margin-bottom: 3rem !important;}
+
+/*.topHeader.stick nav.christmas {background-size: contain, contain;background-position: 12% top, right top;}
+.topHeader.bgheader {background-image: none;}
+.topHeader nav.christmas {width: 100%;background-image: url(../images/christmas-banner-l.png),url(../images/christmas-banne-r.png);background-repeat: no-repeat, no-repeat;
+    background-position: 14% top, right top;}*/
+#bannerSlider .mt-auto {margin-top: 50px !important;}
+#bannerSlider.owl-theme .owl-dots {bottom: 100px;}
+#abouUs .mt-auto {margin-top: 80px !important;}
+topHeader .nav ul.posLogNav li a {padding: 12px 13px;font-size: 12px;}
+.topHeader .nav li.mobHide{display:none;}
+.topHeader .nav li a .mobHide{display:none;}
+.topHeader .nav li a {position:relative}
+.topHeader .nav li a .sup{background-color:#fc771b; width:16px; height:16px; text-align:center; line-height:14px; font-size:10px; color:#ffffff; border-radius:100%; font-weight:600; position:absolute; top: -5px;right: -1px; display:block;}
+.mobshow{display:block;}
+.posLogNav li.acountImg {background-image: url(../images/my-acount.svg);background-repeat: no-repeat;background-position: center left; margin-right:15px; height:32px; width:32px; background-size:100%;}
+.posLogNav li.myCart{height:32px; width:32px;}
+.posLogNav li.acountImg span{display:none;}
+.topHeader .nav ul.posLogNav li.myCart a{padding-left:0px;}
+.logOut.mobHide{display:none;}
+.topHeader .nav li a.mobshow{display:block;}
+}
+
+
+@media screen and (max-width:767px){
+header.topSol .solLef a{font-size:13px; }
+#bannerSlider .item .position-absolute h2, .subHead h2, #abouUs .item .position-absolute h2{ font-size:20px; line-height:24px;}
+#bannerSlider {height:auto!important;   min-height:inherit;}
+
+#bannerSlider.owl-theme .owl-dots {    bottom: 50px;}
+.input-field input[type="email"] {width: calc(100% - 310px);}
+.logo img {max-width: 95px;}
+header.topSol .solRig a.mr-2{margin-right:0.2px !important;}
+.rollCol .font13.mb-5{ margin-bottom:20px !important;}
+.rollcoBest.pt-5.pb-5, .accRedi.pt-5.pb-5{padding-bottom:20px !important; padding-top:20px !important;}
+.someRollco .padB228.padT151{padding-top:30px; padding-bottom:20px;}
+.mbrSection.pt-3{padding-top:0px !important;}
+.someRollco h2{margin-bottom:30px !important;}
+.someRollco .p-45{padding-top:15px; padding-bottom:15px;}
+.welcomeTo.pb-5{padding-bottom:20px !important;}
+.ourValLe.pb-4{padding-bottom:0 !important;}
+.ourPromi .pt-5{padding-top:20px !important;}
+h3{font-size:14px;}
+.contMenu h4{font-size:16px;}
+.rollcoBest{clip-path: none; -webkit-clip-path:none;}
+.contMenu{margin-top:-30px;}
+.bgContact .mbrContArea.padB200{ padding-bottom:0px;}
+.ourTeam .ourTeam-box hr{margin-left:0px !important; margin-right:0px !important;}
+.padB200{padding-bottom:30px;}
+.rollco-alternator.padB200{padding-bottom:10px;}
+.rollcoPartsf .h3 br{display:none;}
+.rollcoPartsf .h3 strong{display: inline-block !important;}
+.rollcoPartsf .pt-5.h3.font-weight-normal.text-white{padding-top:10px !important;}
+.rollcoPartRi.pt-4.mt-5{margin-top:0px !important;  } 
+.findYour .pl-5.pr-5{padding-left:15px !important; padding-right:15px !important; padding-top:30px !important;} 
+.vehicLook label{text-align:left;}
+.subHead.thankYou h2{ font-size:18px  !important; line-height:28px !important;}
+.thankYou.pt-5.pb-5{padding-bottom:0px !important; padding-top:0px !important;}
+.thankyou {display: none;}
+.thankYouMar.mt-5{margin-top:0px !important;}
+.cataloGue.thankYouMar.mt-5{margin-bottom:100px !important;}
+#slider.pt-5{padding-top: 20px !important}
+.faqOrdNews.pt-5{padding-top: 20px !important;}
+ .faqOrdNews .navTabs .nav-tabs .nav-item.show .nav-link,  .faqOrdNews .navTabs .nav-tabs .nav-link{font-size: 18px;}
+.producDe .faqOrdNews .navTabs .nav-tabs .nav-item.show .nav-link{font-size: 14px;}
+.faqOrdNews .navTabs .nav-tabs .nav-link{font-size: 12px;}
+.faqOrdNews .nav-tabs .nav-link.active{background-color: #ef4135; color: #ffffff;}
+
+ .fqrYellow p br{display: none; text-align: left;}
+ .fqrYellow p {text-align: left;}
+ .fqrYellow p.font8{font-size: 12px;}
+ .fqrYellow  h4{text-align: left;}
+ .faqOrdNews .bg-white{min-height: auto;}
+ .faqOrdNews .bg-white{margin-bottom: 15px;}
+.creaAcount h1{font-size: 22px;} 
+.creatAccouText h2{font-size: 24px !important}
+.rollcoPartsf .rollcoPartRi .nav-tabs .nav-link { font-size: 12px;}
+.font24 {font-size: 18px;}
+.ourPromi.pt-5.pb-5{padding-bottom: 20px !important; padding-top: 20px !important;}
+.ourTeam .container.pb-5{padding-bottom: 20px !important;}
+.ourHistory.pt-5.pb-5{padding-bottom: 20px !important; padding-top: 30px !important;}
+.niceHeadli.pt-5.pb-5{padding-bottom:20 !important; padding-top: 0px !important;}
+#abouUs {    height: auto;    min-height: auto;}
+.rollcoPartRi.col-12 {padding-left: 0px !important}
+.creatAcount .col-lg-10.p-5{padding: 15px !important;}
+.creatAcount h1{font-size: 24px !important}
+/*.bg-warning{margin-bottom: 30px !important}*/ 
+.bg-warning.mb-4 {margin-bottom: 0 !important}
+.manuFact{padding-left: 15px !important}
+.manuFact ul {margin-left: 15px !important}
+footer.bg-warning{margin-bottom: 0px !important}
+.accountInfo .nav-tabs .nav-link{font-size:13px;}
+.acctDetails.myOrdDet.pb-5.pt-5.mb-5{margin-bottom:0px !important; padding-bottom:0px !important;}
+.acctDetails .container.pb-5{padding-bottom:0px !important;}
+.comparRes .table-bordered td table td{padding-left:10px !important;  padding-right:10px !important;}
+.callAnsw .col-lg-2{-ms-flex: 0 0 100%;flex: 0 0 100%;max-width: 100%;}
+
+/*.topHeader.stick nav.christmas {background-position: 15% top, right top;}*/
+.bannerImg {display: none}
+.contImg img {display: none}
+.rollcoBesBg {padding-top: 70px;}
+.best-choice {bottom: -75px;}
+.logo img {max-width: 65px; }
+.position-absolute.text-left.pl-5 {padding-left: 15px !important;}
+.faqOrdNews #slide_cont img {width: 100%}
+#cataloGue.subHead .position-absolute {padding-left: 42px;}
+.prd_grimg.img-fluid{ width:60%; margin-bottom:20px;}
+.cataloTop ul li p { margin-right:0px;}
+.font14 {font-size: 12px;}
+
+}
+
+@media screen and (max-width:640px){
+.rollco-alternator.pt-5 {padding-top: 30px !important}
+.rollco-alternator .row.mb-5.mt-3 {margin-top: 0 !important; margin-bottom: 0 !important}
+.cataloGue .subcat_detls {padding-left: 15px !important; padding-top: 20px;}
+.subcat_detls p {font-size: 18px; line-height: 24px; font-weight: 500; margin-bottom: 12px !important;}
+.subcat_detls p:last-child {margin-bottom: 0 !important;}
+.rollco-alternator .downlCent.mt-5.mb-0 {margin-top: 6px !important}
+.rollco-alternator .my-style.pt-5 {padding-top: 14px !important}	
+.faqOrdNews .row.pt-3 {padding-top: 0 !important}
+.faqOrdNews .row .row.pt-5 {padding-top: 15px !important} 
+.faqOrdNews #slide_cont {margin-bottom: 10px}
+.faqOrdNews .row.pt-3 .col-md-10.mb-5 {margin-bottom: 10px !important}
+.faqOrdNews .alt120.border-top {border-top: 4px solid #ef4135 !important;}
+.faqOrdNews .alt120.border-top.pt-3.pb-2 {padding: 0 !important;}
+.faqOrdNews .input-field input[type="submit"] {font-size: 10px; height: 38px; padding: 0px 15px;}	
+/*.faqOrdNews .nav-tabs .nav-link.active {background-color: #ef4135; color: #ffffff;}*/
+.navTabs .nav-tabs { border-bottom: 1px solid #dee2e6; }
+
+.topHeader nav {padding: 10px 0px;}
+.welcomeTo.pb-5 {padding-bottom: 26px !important}
+.welcomeTo.pt-5 {padding-top: 30px !important}
+.welcomeTo .imsize {width: 160px;}
+.welcomeTo .lighgrey.pb-4 {padding-bottom: 0 !important;}
+.welcomeTo .lighgrey.mb-2 {margin-bottom: 15px !important;}
+.rollcoBest {background: #e6e7e8;}
+.rollcoBest.pt-5 {padding-top: 30px !important}
+.rollcoBest.pb-0 {padding-bottom: 30px !important}
+.rollcorow.pt-3 {padding-top: 0 !important}
+.best-choice {bottom: -60px;}
+.arrowdown.p-4 {padding: 5px 0 20px!important;}
+.someRollco .padB228.padT151 {padding-top: 0; padding-bottom: 0;}
+.mbrSection.pb-4 {padding-bottom: 0 !important}
+.someRollco {padding: 30px 0 15px;}
+.someRollco .p-2.bg-danger {padding: 7px 0 11px !important;}
+.bg-dark .container {padding: 0 15px !important}
+.bg-dark .container .col-10 {padding: 0}
+.bg-dark {padding: 30px 0 !important}
+.bgContact .mbrContArea {padding: 15px 0 0 !important}
+.bgContact #contact_us_form .row.pb-5 {padding-bottom: 0 !important}
+.contMenuBg.pb-5 {padding-bottom: 15px !important} 
+.bgContact #contact_us_form {padding-top: 30px;}
+.bgContact .soilWork.pt-4 {padding-top: 0px !important}
+.whyYouCan {padding: 30px 0 14px;;}
+.row.pt-5.pb-5.justify-content-center {padding-top: 0px !important;}
+.whyYouCan .ourValLe hr {border: 1.5px solid #faa61a; margin-bottom: 15px !important;}
+.ourValLe h2 {margin-bottom: 0}
+#abouUs .item .position-absolute span {border: 1px solid #faa61a;}
+#bannerSlider .item .position-absolute h2 hr, #abouUs .item .position-absolute h2 hr, .subHead h2 hr {border-bottom: 3px solid #faa61a;}
+.ourPromi h2 hr {border-bottom: 3px solid #faa61a;}
+.ourHistory.pt-5.pb-5 {padding-bottom: 0 !important} 
+.ourHistory .ourHist h2:after { height: 3px;}
+.ourHistory .ourHist h2 {padding-left: 0 !important}
+.ourHistory .ourHist {padding-right: 15px !important; text-align: center !important; -ms-flex: 0 0 100%; flex: 0 0 100%; max-width: 100%;}
+.ourHistory .ourHistLe ul li:last-child a.nav-link{text-align: center!important}
+.niceHeadli.pt-5.pb-5 {padding: 30px 0 6px!important}
+.niceHeadli.pt-5.pb-5 .container.pt-5 {padding-top: 0 !important}
+.niceHeadli.pt-5.pb-5 .padB200.pt-5 {padding-top: 15px !important}
+.niceHeadli .niceHeadTop h2 hr {border: 1.5px solid #faa61a;}
+#cataloGue.subHead h2 {padding-left: 0; padding-right: 0}
+#cataloGue.subHead .position-absolute {left: 50%!important; text-align: left; padding-left: 15px;}
+.rollcoPartsf .rollcoPartRi .nav-tabs:before {height: 3px;}
+.rollcoPartsf .rollcoPartRi .nav-tabs {margin-top: 0px;}
+.findMain.pt-5 {padding-top: 30px!important; }
+.findMain.pt-5 .font16.mb-5 {margin-bottom: 30px!important;}
+.findMain.pt-5 .font16.mb-4 {margin-bottom: 20px!important;} 
+.findMain.pt-5 .findYour.mb-5 {margin-bottom: 30px!important;} 
+.login-first-text {margin-bottom: 0;}
+.rollcoPartsf .input-field input[type="submit"] {font-size: 12px; height: 40px;  padding: 10px 13px}
+.rollcoPartsf .input-field input[type="text"] {font-size: 12px; height: 40px;}
+#keyword-part p.font12.text-white {margin-left: 0 !important; padding: 0 15px;}
+#cataloGue img.img-fluid {height: 145px; object-fit: unset;}
+.subHead.prlogin .position-absolute {top: 50%;}
+.creatAccouText.mt-5 {margin-top: 30px !important}
+.accountInfo .nav-tabs {border-top: 3px solid #ef4135; padding: 0px 0px;}
+.tab-bg .accountInfo .nav-tabs .nav-link.active {background-color: #ef4135; color: #ffffff;}
+.accountInfo .tab-content {margin-top: 15px;}
+.tab-content table {margin-bottom: 4px;}
+#technical .technical.mb-4 {margin-bottom: 15px !important} 
+.contact-map.pb-5 {padding-bottom: 0 !important}
+.contact-map.pb-5 .contact-flood iframe {display: block}
+.creatAccouText .form-control.submit {margin-bottom: 14px;}
+span.d-block.pb-4.font12.text-white.pl-3 { padding-left: 0 !important; padding-bottom: 10px !important}
+article .container.mob-pad {padding-left: 0; padding-right: 0;}
+.yellow {border-bottom: 5px solid #faa61a !important;}
+.rollco-alternator .downlCent span img {width: 180px;}
+.listmb.padB200{ padding-bottom:0px;}
+.vslogo{ min-height:auto; padding-bottom:30px;}
+.vslogo img{ width:100px;}
+.niceHeadTop span{ display:block}
+.niceHeadTop span img{ width:100px; clear:right}
+header.topSol .solRig a.new-range-btn{ padding:4px 5px;}
+	}
+
+@media screen and (max-width:576px){
+.rollcoBest{clip-path: none; -webkit-clip-path:none;}
+.contMenu{margin-top:0px;}
+.rollcoBest .col-sm-3.pt-5.pb-4.float-right.text-right{ float:left !important; text-align:left !important; padding-top:0px !important;}
+.rollcoBest .col-sm-5.pt-5.pb-4.pl-4{padding-left:0px !important; padding-top:0px !important;}
+.row.pt-3.contRow.pr-4.m-0.pl-4{ padding-left:15px !important;}
+.mbrContArea.padB200{padding-bottom:0px !important;}
+.row.pt-5.pb-5.justify-content-center{padding-bottom:0px !important;}
+.mbrContArea .row.pt-5{padding-top:15px !important;}
+.contMenu.rollcoBest.pt-5.pb-5{padding-top:30px !important; }
+.mbrContArea h2.text-white{font-size:18px;}
+.mbrContArea h2.text-white hr{border-bottom:2px solid #ee3332;}
+.navabarAll .navbar-toggler-right {    right: 1px;    top: -1px;}
+.navbar-toggler{padding:2px 0px;}
+.navabarAll .align-self-center.float-right.d-flex.ml-auto {margin-right: 32px;}
+header.topSol .solRig a.mr-2{margin-right:0px !important;}
+.topHeader.stick nav .logo img.img-fluid{width:90%;}
+.rollcoPart .input-field input[type="text"] {width: calc(100% - 150px);}
+.welcomeTo h2{font-size:16px;}
+.welcomeTo h3.text-black-50.pb-4{font-size:16px;}
+#bannerSlider.owl-theme .owl-dots {    bottom: 32px;}
+.navbar-nav{margin-bottom: 15px;}
+.navbar-collapse{width:134%;}
+.logo img {max-width: 55px;}
+.mobilShow{display: inline-block;}
+.destopHide{display:none;}
+header.topSol .solRig a{padding-top:0px;}
+header.topSol {padding: 10px 0px 13px;}
+nav .dropdown .btn{padding:4px 5px;}
+.has-search.mr-3{margin-right: 0.5rem !important;}
+nav .form-control{padding: 4px 5px; background-position: calc(100% - 5px) center;}
+.logo.col-4{padding-right:0 !important; padding-top:5px;}
+.solLef{ margin-top:-1px;}
+header.topSol .solLef a{padding-bottom:0px;}
+.rollcoBest .pt-5{padding-top:0px !important; }
+.rollCoLe h4, .rollCoRi h4 {    font-size: 13px;}
+.accRedi h2 {    font-size: 18px;    line-height: 30px;}
+.someRollco h2.text-white {    font-size: 30px;}
+.someRollco .bg-danger p br{display:none;}
+.distbu.pl-4{ padding-left:15px !important;} 
+#abouUs .item .position-absolute span {    margin-top: 13px;}
+.niceHeadTop{text-align:center;}
+.findCol.pb-5{padding-bottom:20px !important;}
+.findCol.pb-5 {    padding-bottom: 20px !important;    padding-left: 0px;    padding-right: 0px;}
+.findMain h2 {    font-size: 16px; margin-bottom: 0}
+.rollcoPartsf .rollcoPartRi .nav-tabs .nav-link { font-size: 12px;}
+.ourProduct .imgDetails.sizIncre {    width: 42%;}
+.nav li a {padding: 10px 0px;}
+.rollcoPartsf .rollcoPartRi .nav-tabs .nav-link{font-size:11px;}
+.contMenu .contRow ul{ margin-bottom:0px !important;}
+.accountInfo .nav-tabs .nav-link{font-size:12px;}
+.font18 {    font-size: 14px;}
+.accountInfo.pb-5{padding-bottom:0px !important;}
+.creatAccouText .pb-5{padding-bottom:0px !important;}
+.creatAccouText.pb-5{padding-bottom:0px !important;}
+.creatAccouText.mb-5{margin-bottom:0px !important;}
+.bestChoice .subHead h2.electri {    font-size:24px; line-height:28px;}
+.faqRow li a{font-size:14px; line-height:20px;}
+.cataloGue.thankYouMar.mt-5{margin-bottom:48px !important;}
+.alterntEle.pt-5{padding-top: 20px !important;}
+.amoutDetail.pt-5{ padding-top: 0px !important; }
+.faqOrdTot .pt-5{ padding-top: 0px !important }
+.faqOrdNews .navTabs .nav-tabs .nav-item.show .nav-link{font-size: 12px;}
+.faqOrdNews .navTabs .nav-tabs .nav-link{font-size: 7px;}
+.creaAcount h1{font-size: 18px;} 
+.creaAcount .p-5{padding: 15px 15px 15px 0px !important;}
+.creatAccouText h2 {    font-size: 16px !important;}
+.posLogNav li a{font-size: 11px;}
+.font24 {font-size: 16px;}
+.precise .pl-5{padding-left: 15px!important;}
+.alwa br{display: none;}
+.alwa.pt-5{padding-top: 0px !important}
+/*.subHead .position-absolute{left: 28%;}*/
+.ourPromi h2 {    font-size: 22px;}
+.ourPromi.pt-5.pb-5{padding-top: 30px !important; padding-bottom: 6px !important; } 
+.ourHistory h2 {    font-size: 20px;}
+.ourHistory .nav li a {    padding: 11px 0px 11px 16px;}
+.niceHeadTop span img{ max-width:50%;}
+.rollcoPartsf .rollcoPartRi .nav-tabs .nav-link{font-size:8px;}
+.subHead h2, #abouUs .item .position-absolute h2 {line-height: 15px;}
+h2 {font-size: 22px;}
+header.topSol .solLef a {background-size: 20px auto;}
+.p-2.bg-danger{    padding: .5rem !important;}
+.someRollco h2 {    margin-bottom: 10px !important;}
+.contMen.pt-3{padding-top:10px !important;}
+.ourHistory .nav li a {    padding: 11px 0px 11px 8px; text-align: end}
+.ourHist.pb-5{padding-bottom: 20px !important }
+#abouUs .item .position-absolute span{font-size: 16px;}
+#bannerSlider .item .position-absolute h2 hr, #abouUs .item .position-absolute h2 hr, .subHead h2 hr {    margin: -1px 0px !important;}
+#bannerSlider .item .position-absolute span{padding:6px 6px; font-size: 12px;}
+.creatAcount h1{font-size: 18px !important; }
+.creatAcount  .text-white.pl-5{padding-left: 15px !important}
+.imSize a img {    width: 7%;}
+.pl-5.pt-2.bg-light{padding-left: 15px !important}
+.electheare h2.text-danger{font-size: 22px;}
+.subHead h2, #abouUs .item .position-absolute h2 {    font-size: 20px;    line-height: 22px;}
+#bannerSlider .item .position-absolute h2 { font-size: 16px;}
+.col-md-8.col-6.pb-4.justify-content-end.d-flex.pb-2.align-items-end{ms-flex-align: start !important;align-items: flex-start !important; -ms-flex-pack: start !important;justify-content: flex-start !important; padding-bottom:10px !important;}
+.producDe .faqOrdNews .col-lg-10.bg-warning.pl-5.pr-5{ padding-left:30px !important; padding-right:30px !important;}
+.posLogNav li.myCart a{font-size:14px;}
+.col-lg-8.col-md-8.col-sm-8.col-12.pt-5.pl-5.pb-4{padding-left:15px !important;}
+.rollcoPartsf .h2 { font-size: 16px;}
+.rollcoPartsf .h3{font-size:14px;}
+.privbran img{margin-bottom:15px;}
+.privbran.text-center{text-align:left !important;}
+#bannerSlider .item .position-absolute span{letter-spacing:normal;}
+.modal-body h4{font-size:14px;}
+.mbrSection strong{font-size:14px;}
+.rollcoPart h1{font-size:18px;}
+.p-40{padding:30px 0px 14px;}
+.someRollco h2.text-white {    font-size: 18px;}
+.h2{font-size:16px;}
+.rollcoPartRi .nav-link{padding:8px 0px; }
+.technical .faqOrdNews .table-bordered td, .technical .faqOrdNews .table-bordered th { padding: 10px 15px !important;}
+.faqOrdNews .navTabs .table-bordered tr td.DownloadTR a {font-size: 13px; font-weight: normal;}
+.faqOrdNews .navTabs .table-bordered tr td.DownloadTR a img {width: 14px;}
+#bannerSlider.owl-theme .owl-dots {bottom: 15px;}	
+#bannerSlider .mt-auto {margin-top: 22px !important;}
+.mbr-added #contact_us_form .submit {margin-bottom: 14px;}
+#cataloGue .mbr-added
+
+
+.position-absolute.text-left.pl-5 {padding-left: 40px !important; }
+
+}
+
+@media screen and (max-width:400px){
+#bannerSlider.owl-theme .owl-dots {    bottom: 15px;}
+.creatAccouText .form-control.submit{width:100%; max-width:100%;}
+.creatAcount .text-white.pl-5 {    padding-left: 0px !important;}
+p.creatTExt {    font-size: 16px;    line-height: 26px;    margin-bottom: 0px;}
+.col-lg-8.col-12.text-center{text-align:left !important;}
+.col-lg-8.col-12.text-center{text-align:left !important;}
+/*.producDe .position-absolute.text-left.pl-5 {    padding-left: 46px !important;}*/
+/*.electheare .position-absolute.text-left.pl-5 {    padding-left: 61px !important;}*/
+/*.topHeader.stick nav.christmas {background-position: 18% top, right top;}*/
+header.topSol .solRig img {max-width: 20px;}
+.findMain .findRow .border-bottom{ max-width:100%}
+#abouUs .mt-auto {margin-top: 40px !important;}	
+.topHeader .nav ul.posLogNav li a { padding: 12px}
+.topHeader .nav ul.posLogNav li.myCart a {padding-left: 40px;}
+.topHeader .nav li{background-size: 28px auto;}
+.topHeader .nav li a .sup {top: -4px; right: 9px;}
+}
+@media screen and (max-width:359px){
+.bestChoice .subHead h2.electri {    font-size: 23px;    line-height: 22px;}
+.rollCoLe h4, .rollCoRi h4 {    font-size: 12px;}
+#bannerSlider .item .position-absolute h2, .subHead h2, #abouUs .item .position-absolute h2 {    font-size: 15px;    line-height:20px;}
+.rollCoLe .pr-3,  rollCoLe .px-3 {padding-right: 10px !important}
+.accountInfo .nav-tabs .nav-link {    font-size: 12px;}
+.rollcoPart .input-field input[type="text"] {width: calc(100% - 50px); margin-bottom: 20px;}
+.input-field input[type="submit"] {padding: 10px 60px;}
+.ourHistory .nav li a {    padding: 13px 0px 11px 15px;}
+.nav li a{font-size: 10px;}
+.posLogNav li a {padding: 5px 10px;}
+.posLogNav li.myCart a{font-size: 12px;}
+.rollcoPartsf .rollcoPartRi .nav-tabs .nav-link {font-size: 12px; font-weight:600;}
+.rollcoPartsf .rollcoPartRi .prodheight .nav-tabs .nav-link {font-size: 8px; font-weight:600;}
+.bestChoice .subHead h2.electri{font-size: 20px;}
+.rollcoPartsf .h2, .rollcoPartsf .h3{font-size:18px;}
+header.topSol .solLef a.pr-3{padding-right:5px !important;}
+}

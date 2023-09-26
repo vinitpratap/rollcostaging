@@ -1,0 +1,28 @@
+
+.topHeader.bgheader{ left:0; right: 0; background-image: url(../images/christmas-banner.png);background-repeat: no-repeat;width: 100%;background-position: center bottom;background-size: contain;/* height:150px;*/ top:0; bottom: 0;}
+.topHeader.stick nav.christmas {background-image: url(../images/christmas-banner-l.png),url(../images/christmas-banne-r.png) ;background-repeat: no-repeat, no-repeat; background-position:left top, right top;}
+
+
+@media screen and (max-width:1100px){
+.topHeader.stick nav.christmas {background-position: 7% top, right top;} 
+
+}
+
+@media screen and (max-width:991px){
+.topHeader.stick nav.christmas {background-size: contain, contain;background-position: 12% top, right top;}
+.topHeader.bgheader {background-image: none;}
+.topHeader nav.christmas {width: 100%;background-image: url(../images/christmas-banner-l.png),url(../images/christmas-banne-r.png);background-repeat: no-repeat, no-repeat;
+    background-position: 14% top, right top;}
+
+}
+
+@media screen and (max-width:767px){
+.topHeader.stick nav.christmas {background-position: 15% top, right top;}
+
+}
+
+
+
+@media screen and (max-width:400px){
+.topHeader.stick nav.christmas {background-position: 18% top, right top;}
+}

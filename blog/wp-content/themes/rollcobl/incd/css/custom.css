@@ -1,0 +1,203 @@
+*{padding:0;margin:0;}
+body{ font-weight:400; font-family: Arial, sans-serif; font-size:14px; }
+.container {max-width:1230px;}
+header.topSol{ border-bottom: 2px solid #faa61a; padding:15px 0px 15px; position:relative; z-index:9999; background-color:#ffffff} 
+header.topSol .solLef a{ font-size:16px; color:#000000; padding-left:22px; background-image:  url(../images/call.svg); background-repeat: no-repeat; background-position:0px 0px; background-size: 22px auto; padding-bottom: 10px; font-weight:normal; }
+header.topSol .solLef a.email{background-image:  url(../images/email.svg);background-position:0px -2px; padding-left:24px; }
+header.topSol .solRig a{ display: inline-block}
+header.topSol .solRig img{ max-width:25px; height:auto} 
+.topHeader nav{padding:15px 0px; background-color:#fff; z-index:9999; position:sticky;  width:100%; display:block;     box-shadow: 0px 4px 5px -5px rgba(0,0,0,0.15);}
+.topHeader.stick nav{  position:fixed; width:100%; left:0; top:0px; padding:10px 0px; z-index:9999999; display:block; }
+.topHeader.stick nav .logo img.img-fluid { width:40%; transition: all 0.4s ease-in-out;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out; d}
+.new-range-btn{border-radius: 0px;padding: 4px 15px;border: 0px;color: #ffffff;height: 26px;line-height: 1.5;background-color:#fd7e14 !important;font-size: 11px;text-align: center;white-space: nowrap;border: 1px solid #ef4135;text-decoration: none;}
+.new-range-btn:hover{background-color:transparent !important; border:1px solid #343a40; color:#343a40}
+.topHeader .nav ul{list-style:none;margin-left: 0;}
+.topHeader .nav li{display:inline-block;}
+.topHeader .nav li a{font-size:14px; color:#000000!important; padding:5px 21px;}
+.navbar-expand-lg .navbar-nav {padding-top: 23px;}
+nav .dropdown .btn { border-radius:0px; padding:4px 15px; border:0px; color:#ffffff; height:26px; line-height: 1.5;background-color:#ef4135!important; font-size:11px; text-align:center; white-space: nowrap;border: 1px solid #ef4135;}
+.dropdown-toggle::after{display:none;}
+nav .dropdown .dropdown-menu {padding:0rem 0;font-size:.9rem;}
+.rollcoBest{background: #e6e7e8;-webkit-clip-path: polygon(50% 0, 100% 20%, 100% 100%, 0 100%, 0 20%);clip-path: polygon(50% 0, 100% 20%, 100% 100%, 0 100%, 0 20%);}
+
+.bgContact { background-image:url(../images/bg-contact.jpg); position:relative;} 
+.bgContact .mbrContArea {  background-color: rgba(0, 0, 0, 0.9);}
+.contMenu{background: #4d4d4f;}
+/*.contMenu::before{	width: 100%;height:0%; content: ''; position: absolute;left:0; bottom:-25%;-webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0, 50% 50%);clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0, 50% 50%); z-index:1}*/
+.contMenu {/* margin-top: -180px;*/ position: relative; z-index: 99; padding: 0;}
+.contImg { margin-bottom: -1px;}
+.contImg img { vertical-align: bottom; display: block;}
+.contMenuBg {background: #4d4d4f;}
+.contMenu .contRow ul{ padding-left:12px!important;} 
+.contMenu .contRow ul li{ display:block; padding-left:40px; padding-bottom:15px;  background-repeat:no-repeat; background-position:0px 0px;}
+.contMenu .contRow ul li.call{background-image:url(../images/call2.svg);}
+.contMenu .contRow ul li.email{background-image:url(../images/email2.svg);}
+.contMenu .contRow ul li.locin{background-image:url(../images/warehouse2.svg);}
+.contMenu .contRow ul li a{ font-size:12px; color:#fff; line-height:22px; font-weight:400; vertical-align:top;}
+.contMenu .contRow ul li.border-top{ border-color:#ef4135!important;}
+.contMenu  ul li{ display:block;  padding-bottom:5px; }
+.contMenu  ul li a{ font-size:12px; color:#fff; line-height:20px;}
+.vslogo { min-height: 150px;}
+footer.bg-danger{background-color:#faa61a !important;}
+.alt20{font-weight:600;}
+.topText{ font-size:14px;}
+ .mt-20{margin-top:20px;}
+ .mobilShow{display:none;}
+ .nav li a.active{ color:#ef4135 !important;}
+ .nav-tabs .nav li a{font-size: 14px;color: #000000 !important;padding: 5px 21px;}
+ nav .dropdown .btn{margin-left:30px;}
+body:not(.custom-background-image)::before, body:not(.custom-background-image)::after{height:0px !important;}
+.search-form label{display:block;}
+.widget ul li a{color:#000000;}
+.widget .widget-title{ color:#ef4135}
+body:not(.search-results) article:not(.type-page) .entry-footer{float:none; width:100%;}
+body:not(.search-results) article:not(.type-page) .entry-content{float:none; width:100%;}
+.entry-footer{line-height:15px !important; margin-bottom:20px;}
+
+.h4, h4 {    font-size: 1.2rem;}
+.contMenu .contRow ul{margin:0px;margin-bottom: 1rem;}
+.privbran img {    width: 120px;    padding-right: 15px;}
+.yellow {    border-bottom: 10px solid     #faa61a !important;}
+.contMenu .contRow ul li.call a, .contMenu .contRow ul li.email a {    font-size: 15px;}
+a { color: #ef4135;}
+.entry-title a:hover, .entry-title a:focus {    color:     #ef4135;}
+.comment-reply-link {color:#ef4135;}
+
+@media screen and (max-width:1540px){
+.rollcoBest { -webkit-clip-path: polygon(50% 0, 100% 15%, 100% 100%, 0 100%, 0 15%);  clip-path: polygon(50% 0, 100% 15%, 100% 100%, 0 100%, 0 15%);}
+}
+@media screen and (max-width:1366px){
+nav .nav li a {padding: 5px 14px;}
+header.topSol{padding:10px 0px; position:relative; z-index:99; background-color:#fff}
+nav { padding:15px 0px;}	
+header.topSol .solRig a { padding-top:5px;}
+header.topSol .solRig img { max-width: 25px;}
+.pb-200{ padding-bottom:100px!important;}
+.padB200{ padding-bottom:100px}
+.padB100{ padding-bottom:50px}
+.padT100{ padding-top:50px}
+ header.topSol .solRig a { padding-top: 5px;}
+header.topSol .solRig img { max-width: 25px;}	
+.contMenu .row.pt-5 { padding-top: 0px!important;}	
+}
+
+@media screen and (max-width:1260px){
+
+.nav li a {padding: 5px 18px; }
+}
+
+
+@media screen and (max-width:1200px){
+nav .nav li a {padding: 5px 12px; font-size:12px;}
+
+
+}
+@media screen and (max-width:1160px){
+
+.nav li a {padding: 5px 12px; font-size:12px;}
+}
+@media screen and (max-width:1100px){
+/*.logo img{ max-width:110px; width:100%; height:auto}*/
+nav { padding:10px 0px;}
+header.topSol {padding:15px 0px 10px;}
+.navbar-expand-lg .navbar-nav {padding-top: 14px;}
+.padT151{padding-top:65px;}
+.contMenu h4  {font-size:16px !important;}
+.navTabs .nav-tabs .nav-item.show .nav-link, .navTabs .nav-tabs .nav-link{font-size:15px;}
+.topHeader .nav li a { padding: 5px 14px;}
+.logo img { max-width: 70px; vertical-align: top;}	
+.contMenuBg { padding-top: 30px;}	
+	
+}
+@media screen and (max-width:1024px){
+#bannerSlider{ background-color:transparent; background:none;}
+#bannerSlider::before{background:none;}
+.rollcoPart .row > .col-6.text-center{padding-top:30px !important; margin-top:0px;}
+#bannerSlider {    height: 60vh;    min-height: 471px;}
+.rollcoPart h1{ font-size:20px;}
+.accRedi h2{font-size:20px; line-height:30px;}
+.accRedi h3{font-size:16px;}
+.mbrContArea h2.text-white{font-size:22px;}
+.nav li a{padding:5px 10px;}
+.bannerSlide {    margin-top: 117px;}
+#bannerSlider .item .position-absolute {top: 28%;}
+#bannerSlider.owl-theme .owl-dots {bottom:20px;}
+.owl-carousel .owl-item img {width: 135%;}
+.rollcoPart .input-field input[type="text"] {    width: calc(100% - 200px);}
+.p-2.bg-danger{padding:0px !important;}
+#abouUs {    margin-top: -120px;    height: 58vh;    min-height: 472px;}
+.rollcoPartsf .rollcoPartRi .nav-tabs .nav-link{ font-size: 14px; }
+
+}
+
+@media screen and (max-width:991px){
+.navabarAll{position:relative;}
+.navabarAll .navbar-toggler-right{position:absolute; right:15px; top:0px; display:inline-block;}
+.form-group.has-search.mb-0.mr-5{margin-right:15px !important;}
+.navabarAll .align-self-center.float-right.d-flex.ml-auto{margin-right:60px;}
+.navbar-nav{float:right; margin-top:20px; margin-bottom:50px;}
+.navbar-collapse {    -ms-flex-preferred-size: 100%;    flex-basis: 100%;    -ms-flex-positive: 1;    flex-grow: 1;    -ms-flex-align: center;    align-items: center;    position: absolute;    width: 125%;    background-color: #fff; z-index:-1; right:0; }
+.navbar-expand-lg > .container, .navbar-expand-lg > .container-fluid {    padding-right:15px !important;    padding-left: 15px !important;}
+.navbar-expand-lg .navbar-nav {padding-top: 35px;}
+.nav li a{padding:10px 6px;}   
+.site-inner {width: 100%;    padding: 0px 37px 0px 0px;}
+.sidebar { padding: 15px 0px 0px 30px; } 
+    
+}
+
+
+@media screen and (max-width:767px){
+.contMenu h4{font-size:16px;}
+.rollcoBest{clip-path: none; -webkit-clip-path:none;}
+.contMenu{margin-top:-30px;}
+footer.bg-warning{margin-bottom: 0px !important}
+header.topSol .solLef a {  font-size: 13px;}	
+.logo img {  max-width: 65px;}	
+.contImg img { display: none;}	
+}
+@media screen and (max-width:640px){	
+header.topSol .solRig a.new-range-btn { padding: 4px 5px;}	
+.topHeader nav { padding: 10px 0px;}	
+.vslogo { min-height: auto; padding-bottom: 30px;}	
+.vslogo img { width: 100px;}	
+.contMenuBg.pb-5 { padding-bottom: 15px !important;}	
+.yellow { border-bottom: 5px solid #faa61a !important;}	
+	}
+	
+@media screen and (max-width:576px){
+.rollcoBest{clip-path: none; -webkit-clip-path:none;}
+.contMenu{margin-top:0px;}
+.rollcoBest .col-sm-3.pt-5.pb-4.float-right.text-right{ float:left !important; text-align:left !important; padding-top:0px !important;}
+.rollcoBest .col-sm-5.pt-5.pb-4.pl-4{padding-left:0px !important; padding-top:0px !important;}
+.contMenu.rollcoBest.pt-5.pb-5{padding-top:30px !important; padding-bottom:0px !important;}
+.navbar-nav{margin-bottom: 15px;}
+.navbar-collapse{width:134%;}
+.logo img {max-width: 55px;}
+.mobilShow{display: inline-block;}
+.destopHide{display:none;}
+header.topSol .solRig a{padding-top:0px;}
+header.topSol {padding: 10px 0px 13px;}
+nav .dropdown .btn{padding:4px 5px;}
+.has-search.mr-3{margin-right: 0.5rem !important;}
+nav .form-control{padding: 4px 5px; background-position: calc(100% - 5px) center;}
+.logo.col-4{padding-right:0 !important; padding-top:5px;}
+.solLef{ margin-top:-1px;}
+header.topSol .solLef a{padding-bottom:0px;}
+.rollcoBest .pt-5{padding-top:0px !important; }
+.nav li a {padding: 10px 0px;}
+.contMenu .contRow ul{ margin-bottom:0px !important;}
+.solRig .mr-2{margin-right:0px !important;}
+header.topSol .solRig a { padding-top: 0px;}
+header.topSol .solLef a { background-size: 20px auto;  padding-bottom: 0px;}	
+.topHeader.stick nav .logo img.img-fluid { width: 90%;}
+.privbran.text-center { text-align: left !important;}	
+.privbran img { margin-bottom: 15px;}	
+.navabarAll .logo {display: flex}	
+	}
+@media screen and (max-width:400px){	
+header.topSol .solRig img {max-width: 20px;}	
+	
+	}
+	
+@media screen and (max-width:359px){
+.nav li a{font-size: 10px;}}

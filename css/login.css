@@ -1,0 +1,33 @@
+*{padding:0;margin:0;}
+body{ font-weight:400; font-family: 'Montserrat', sans-serif; }
+.logArea{height: 100vh; background-image:url(../images/login2.jpg); background-position:center; background-repeat: no-repeat; background-size:cover; background-color: #666;}
+.logArea .position-absolute {width: 100%; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); z-index: 9;}
+.signIn{ max-width:400px!important;}
+.signIn h1{ font-size:18px; color:#6c1b59}
+.signIn label{ font-size:12px; color:#000; font-weight:bold}
+.signIn p{ font-size:13px;}
+.signIn a{color: #212529;}
+.signIn .texUpp{ text-transform:uppercase}
+.signIn .form-control.submit{ color:#e1443c; background-color:#a8a8a9!important; border-color:#000000!important; font-weight:bold; font-size:12px;}
+.logNav ul li{height:7vh; display:block; font-size:18px; color:#ffffff; text-transform:uppercase; padding-left:35px; background-image:url(../images/login-aero.svg); background-repeat:no-repeat; background-position:left 10px ; 
+}
+.logNav ul{ position:relative; margin:0px; padding:20px 0px 0px;}
+.logNav ul:after{ content:""; position:absolute; width:4px; height:100%; background-color:#faa61a; left:2px; top:0; z-index:-1 }
+.error-msg {font-size: 12px;}
+@media screen and (max-width:767px){
+.logArea .position-absolute{top: 70%;-webkit-transform: translate(-50%, -35%);    -ms-transform: translate(-50%, -35%);    transform: translate(-50%, -35%)}
+.logArea {    height: 145vh; padding-bottom:20px;}
+.col-md-4.col-12.align-self-center.text-right{ text-align:left !important;}
+.logNav ul li {height: 12vh;     background-position: left 7px;}
+#rollco_login_form .form-logo {width: 100px;}
+.logArea .pl-3 { padding-left: 15px !important;}
+
+}
+
+@media screen and (max-width:575px){
+.logArea .position-absolute{top: 52%;}	
+.logNav ul li {height: 5vh;font-size: 14px; background-position: left 3px;}	
+.signIn p {font-size: 12px;}
+.logArea { height: 130vh;}
+
+	}

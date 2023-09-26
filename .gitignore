@@ -1,0 +1,11 @@
+upload/*
+__MACOSX/*
+csv/*
+ssl/*
+blog/wp-content/uploads/*
+nbproject/*
+ajax1/*
+test/*
+secAdm/.env
+inc-footer1.php
+listing1.php
