@@ -35,6 +35,7 @@
                     <li class="nav-item"><a href="{{route('customer.manage',['type'=>'unverified','all'])}}" class="nav-link">Unverified</a> </li>
                     
                     <li class="nav-item"><a href="{{route('tempuser.manage')}}" class="nav-link">Temp Customers</a> </li>
+                    <li class="nav-item"><a href="{{route('deltempuser.manage')}}" class="nav-link">Deleted Temp Customers</a> </li>
                     <li class="nav-item"><a href="{{route('deluser.manage')}}" class="nav-link">Deleted Customers</a> </li>
                     <li class="nav-item"><a href="{{route('usercategory.manage')}}" class="nav-link">Customer's Category</a> </li>
 

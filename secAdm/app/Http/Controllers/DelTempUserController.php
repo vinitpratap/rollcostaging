@@ -13,7 +13,7 @@ use DB;
 use Mail;
 use Illuminate\Support\Facades\Input;
 use App\Modal\Admin;
-use App\Modal\DelUser;
+use App\Modal\DelTempUser;
 use App\Modal\Usercategory;
 use App\Modal\Currency;
 use App\Modal\Group;
@@ -21,7 +21,7 @@ use App\Modal\SalesCategory;
 use App\Modal\UserCategoryTag;
 use App\Exports\DelCustomerExport;
 
-class DelUserController
+class DelTempUserController
         extends Controller {
     /*
       |--------------------------------------------------------------------------
@@ -61,13 +61,13 @@ use AuthenticatesUsers;
      * 10-01-2018
      */
 
-    public function DelUsers(Request $request) {
+    public function DelTempUsers(Request $request) {
 
         $page_val = 50;
         $pagination_arr = array(50, 100);
         if (Auth::guard('admin')->user()->admin_role == 1) {
 
-            $query = DelUser::query();
+            $query = DelTempUser::query();
 
             if (!empty($request->search)) {
                 $search = $request->search;
@@ -87,15 +87,14 @@ use AuthenticatesUsers;
                 $page_val = $request->data_entries;
             }
 
-            $query = $query->where('companyName', '!=', '');
-            $pageData = $query->orderby('companyName', 'ASC')
+            $pageData = $query->orderby('created_at', 'ASC')
                     ->paginate($page_val)
                     ->withPath('?search=' . $request->search . '&data_entries=' . $page_val);
             $catData = Usercategory::orderBy('cust_cat_nme', 'ASC')->get();
             $custCatData = SalesCategory::select('scat_nm', 'sc_id')->orderBy('scat_nm', 'ASC')->get();
             $currData = Currency::orderBy('curr_name', 'ASC')->get();
             $grpData = Group::orderBy('gr_nm', 'ASC')->get();
-            return view('admin.customer.view-delcustomers',
+            return view('admin.customer.view-deltempusers',
                     array('data' => $pageData, 'catData' => $catData, 'currency' => $currData,
                         'groupData' => $grpData, 'data_entries' => $page_val, 'pagination_arr' => $pagination_arr, 'custCatData' => $custCatData));
         } else {
@@ -179,21 +178,19 @@ use AuthenticatesUsers;
      * 10-01-2018
      */
 
-    public function DeleteDelUser($id) {
-        $users = DelUser::where('u_id', '=', base64_decode($id))->first();
-
+    public function DeleteDelTempUser($id) {
+        $users = DelTempUser::where('u_id', '=', base64_decode($id))->first();
 
         //dd($users->toArray());
         $logData = array('subject_id' => base64_decode($id), 'user_id' => Auth::id(),
-            'table_used' => 'rollco_ms_users_deleted',
+            'table_used' => 'rollco_ms_tmpusers_deleted',
             'description' => 'delete', 'data_prev' => urldecode(http_build_query($users->toArray())),
             'data_now' => ''
         );
 
         saveQueryLog($logData);
 
-
-        $status = DB::table('rollco_ms_users_deleted')->where('u_id', base64_decode($id))->delete();
+        $status = DB::table('rollco_ms_tmpusers_deleted')->where('u_id', base64_decode($id))->delete();
         if ($status) {
             return redirect()->back()->with('message',
                             'customer successfully deleted');
@@ -203,34 +200,87 @@ use AuthenticatesUsers;
         }
     }
 
-    public function RestoreDelUserData(Request $request) {
-        $users = DelUser::Where('u_id', base64_decode($request->id))->first();
+    public function RestoreDelTempUserData(Request $request) {
+        $users = DelTempUser::Where('u_id', base64_decode($request->id))->first();
 
         $usersArr = $users->toArray();
-        $usersArr['user_status'] = 1;
 
-        unset($usersArr['del_datetime']);
-        unset($usersArr['del_by']);
-        unset($usersArr['del_ip']);
-        $checkUser = DB::table('rollco_ms_users')
-                        ->select('u_id')->Where('com_emailAddress', $usersArr['com_emailAddress'])->first();
+
+        $checkUser = DB::table('rollco_ms_tmpusers')
+                        ->select('u_id')->Where('u_id', base64_decode($request->id))->first();
         if ($checkUser) {
             
         } else {
-            DB::table('rollco_ms_users')->insert($usersArr);
-            DB::table('rollco_ms_users_deletelog')->insert(array('cust_id' => $usersArr['u_id'], 'cust_email' => $usersArr['com_emailAddress'], 'res_datetime' => date('Y-m-d H:i:s'), 'res_by' => Auth::id(), 'res_ip' => $_SERVER['REMOTE_ADDR']));
-           DB::table('rollco_ms_users_deleted')->where('u_id', base64_decode($request->id))->delete();
+            DB::table('rollco_ms_tmpusers')->insert($usersArr);
+            DB::table('rollco_ms_tmpusers_deletelog')->insert(array('cust_id' => $usersArr['u_id'], 'res_datetime' => date('Y-m-d H:i:s'), 'res_by' => Auth::id(), 'res_ip' => $_SERVER['REMOTE_ADDR']));
+            DB::table('rollco_ms_tmpusers_deleted')->where('u_id', base64_decode($request->id))->delete();
         }
         echo json_encode(array('status' => 1));
     }
 
-    
+    public function exportToExcelDelTempUser() {
+        $headers = array(
+            "Content-type" => "text/csv",
+            "Content-Disposition" => "attachment; filename=" . date('Y-m-d-H-i-s') . "-deletedtempcust.csv",
+            "Pragma" => "no-cache",
+            "Cache-Control" => "must-revalidate, post-check=0, pre-check=0",
+            "Expires" => "0"
+        );
 
-    public function exportToExcelDelCustomer() {
-        $exporter = app()->makeWith(DelCustomerExport::class);
-        return $exporter->download(date('Y-m-d-H-i-s') . '-deletedcustomer.xlsx');
+        $query = DB::table('rollco_ms_tmpusers_deleted')
+                ->select('firstName', 'lastName', 'com_zipCode', 'com_city', 'customerID', 'created_at'); //'mscode.MsCode', 'mscode.V8Key'
+
+        if (!empty($request->search)) {
+            $search = $request->search;
+
+            $query = $query->where(function ($query) use ($search) {
+                $query->where('firstName', 'LIKE', '%' . $search . '%');
+                $query->orWhere('lastName', 'LIKE', '%' . $search . '%');
+                $query->orWhere('com_city', 'LIKE', '%' . $search . '%');
+                $query->orWhere('com_zipCode', 'LIKE', '%' . $search . '%');
+                $query->orWhere('customerID', 'LIKE', '%' . $search . '%');
+            });
+        }
+
+        $reqData = $query->orderBy('firstName', 'ASC')
+                ->get();
+        //dd($reqData);
+
+
+
+        $columns = array("Company Name", "Post Code", " County/ Town", "Sales Person", "Temp Account Code", "Created Date", "Email ID", "Group", " Account Code");
+
+        $callback = function () use ($reqData, $columns) {
+            $file = fopen('php://output', 'w');
+            fputcsv($file, $columns);
+
+            foreach ($reqData as $review) {
+                $uname = '';
+                $query1 = DB::table('rollco_salescal as sales')
+                        ->select('users.firstName as uname')
+                        ->where('sales.post_code', $review->com_zipCode);
+                $query1 = $query1->join('rollco_ms_users as users', 'users.u_id', '=',
+                        'sales.sec_id');
+
+                $query1 = $query1->where('sales.full_name', 'LIKE', '%' . $review->firstName . ' ' . $review->lastName . '%');
+                $resData1 = $query1->first();
+
+                if (($resData1) && $resData1->uname != '') {
+                    $uname = $resData1->uname;
+                } else {
+                    $uname = 'Unknown';
+                }
+                //dd($resData1);
+                fputcsv($file, array($review->firstName . ' ' . $review->lastName,
+                    $review->com_zipCode,
+                    $review->com_city,
+                    $uname,
+                    $review->customerID,
+                    $review->created_at, '', '', ''));
+            }
+            fclose($file);
+        };
+        return response()->stream($callback, 200, $headers);
     }
-
-   
 
 }

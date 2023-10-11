@@ -260,6 +260,11 @@ use AuthenticatesUsers;
     public function DeleteTempuser($id) {
         $users = TempUser::where('u_id', '=', base64_decode($id))->first();
 
+        $del_user = $users->toArray();
+
+
+        DB::table('rollco_ms_tmpusers_deleted')->insert($del_user);
+
         $logData = array('subject_id' => base64_decode($id), 'user_id' => Auth::id(),
             'table_used' => 'rollco_ms_tmpusers',
             'description' => 'delete', 'data_prev' => urldecode(http_build_query($users->toArray())),
@@ -268,6 +273,7 @@ use AuthenticatesUsers;
 
         saveQueryLog($logData);
 
+        DB::table('rollco_ms_tmpusers_deletelog')->insert(array('cust_id' => $del_user['u_id'],  'del_datetime' => date('Y-m-d H:i:s'), 'del_by' => Auth::id(), 'del_ip' => $_SERVER['REMOTE_ADDR']));
         $status = DB::table('rollco_ms_tmpusers')->where('u_id', base64_decode($id))->delete();
         if ($status) {
             return redirect()->back()->with('message',
@@ -455,7 +461,7 @@ use AuthenticatesUsers;
                 ->get();
         //dd($reqData);
 
-      
+
 
         $columns = array("Company Name", "Post Code", " County/ Town", "Sales Person", "Temp Account Code", "Created Date", "Email ID", "Group", " Account Code");
 

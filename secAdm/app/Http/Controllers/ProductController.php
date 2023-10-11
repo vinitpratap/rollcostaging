@@ -1397,11 +1397,32 @@ successfully uploaded.');
 
                             $Teeth_wheel_side = '';
                             $Teeth_Diff_Side = '';
+                            $Min_Th = '';
+                            $Max_Th = '';
+                            $Centre_Dia = '';
+                            $PCD = '';
+                            $Disc_Type = '';
+                            $Width = '';
+                            $F_R = '';
 
                             if (isset($productArr[$i]['Teeth_wheel_side']))
                                 $Teeth_wheel_side = trim($productArr[$i]['Teeth_wheel_side']);
                             if (isset($productArr[$i]['Teeth_Diff_Side']))
                                 $Teeth_Diff_Side = trim($productArr[$i]['Teeth_Diff_Side']);
+                            if (isset($productArr[$i]['Min_Th']))
+                                $Min_Th = trim($productArr[$i]['Min_Th']);
+                            if (isset($productArr[$i]['Max_Th']))
+                                $Max_Th = trim($productArr[$i]['Max_Th']);
+                            if (isset($productArr[$i]['Centre_Dia']))
+                                $Centre_Dia = trim($productArr[$i]['Centre_Dia']);
+                            if (isset($productArr[$i]['PCD']))
+                                $PCD = trim($productArr[$i]['PCD']);
+                            if (isset($productArr[$i]['Disc_Type']))
+                                $Disc_Type = trim($productArr[$i]['Disc_Type']);
+                            if (isset($productArr[$i]['Width']))
+                                $Width = trim($productArr[$i]['Width']);
+                            if (isset($productArr[$i]['F_R']))
+                                $F_R = trim($productArr[$i]['F_R']);
 
                             if (isset($productArr[$i]['Category']))
                                 $Category = trim($productArr[$i]['Category']);
@@ -1539,7 +1560,15 @@ successfully uploaded.');
 							$Inner_Dia = remove_accents($Inner_Dia);
 							$Outer_Dia = remove_accents($Outer_Dia);
 							$Teeth_wheel_side = remove_accents($Teeth_wheel_side);
+
 							$Teeth_Diff_Side = remove_accents($Teeth_Diff_Side);
+							$Min_Th = remove_accents($Min_Th);
+							$Max_Th = remove_accents($Max_Th);
+							$Centre_Dia = remove_accents($Centre_Dia);
+							$PCD = remove_accents($PCD);
+							$Disc_Type = remove_accents($Disc_Type);
+							$Width = remove_accents($Width);
+							$F_R = remove_accents($F_R);
 							
                             if ($Category != '' && $Sub_Category != '' && $Rollco_Part != '') {
                                 $mcat_id = 0;
@@ -1574,8 +1603,9 @@ successfully uploaded.');
                                         'Total_Length' => $Total_Length, 'Pin' => $Pin, 'Fitting_position' => $Fitting_position,
                                         'No_of_Holes' => $No_of_Holes, 'Bolt_Hole_Circle_Dia' => $Bolt_Hole_Circle_Dia,
                                         'Inner_Dia' => $Inner_Dia, 'Outer_Dia' => $Outer_Dia, 'Teeth_wheel_side' => $Teeth_wheel_side,
-                                        'Teeth_Diff_Side' => $Teeth_Diff_Side);
+                                        'Teeth_Diff_Side' => $Teeth_Diff_Side,'Min_Th' => $Min_Th,'Max_Th' => $Max_Th,'Centre_Dia' => $Centre_Dia,'PCD' => $PCD,'Disc_Type' => $Disc_Type,'Width' => $Width,'F_R' => $F_R);
                                     //dd($changed_data);
+                                                                                                           
                                     $update = Product::Where('prod_part_no',
                                                     $Rollco_Part)->update($changed_data);
                                     //dd($update);
@@ -1982,7 +2012,13 @@ successfully uploaded.');
             'Inner_Dia' => $request->Inner_Dia,
             'Outer_Dia' => $request->Outer_Dia,
             'Teeth_wheel_side' => $request->Teeth_wheel_side,
-            'Teeth_Diff_Side' => $request->Teeth_Diff_Side,
+            'Min_Th' => $request->Min_Th,
+            'Max_Th' => $request->Max_Th,
+            'Centre_Dia' => $request->Centre_Dia,
+            'PCD' => $request->PCD,
+            'Disc_Type' => $request->Disc_Type,
+            'Width' => $request->Width,
+            'F_R' => $request->F_R,
             'prod_overview' => $request->prod_overview,
         );
 

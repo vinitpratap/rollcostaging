@@ -1227,7 +1227,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'edit') {
                                                                     $(document).ready(function () {
                                                                         var today = new Date();
 
-                                                                        var dd = today.getDate();
+                                                                        var dd = today.getDate() - 1;
                                                                         var mm = today.getMonth() + 1; //January is 0! 
                                                                         var yyyy = today.getFullYear();
                                                                         if (dd < 10) {
