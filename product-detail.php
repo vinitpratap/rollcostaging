@@ -94,6 +94,7 @@ if (isset($_SESSION['cpr2']) && $_SESSION['cpr2'] != '') {
 if (isset($_SESSION['cpr3']) && $_SESSION['cpr3'] != '') {
     $countPro++;
 }
+
 ?>
 
 <!doctype html>
@@ -125,6 +126,7 @@ if (isset($_SESSION['cpr3']) && $_SESSION['cpr3'] != '') {
             </article>-->
             <?php include 'search-module.php'; ?>
             <?php
+            
             $pro = 0;
             $sp = 0;
             if (isset($_SESSION['u_id']) && $_SESSION['u_id'] != '') {
@@ -141,7 +143,7 @@ if (isset($_SESSION['cpr3']) && $_SESSION['cpr3'] != '') {
                 $productSql = "SELECT prod_id,prod_img1,prod_nm,catid,prod_stock,prod_part_no,prod_volt,prod_out,prod_regu,prod_pull_type,prod_fan,prod_teeth,
 prod_trans,prod_rot,prod_dim,prod_add_inf,prod_overview,prod_dim,position,gr,car_fits,fuel,external_teeth,internal_teeth,diameter,
 height,abs_ring,Weight,Disc_Dia,Disc_Thick,Piston_Dia,Man,Pump_Type,Pressure,Pully_Ribs,Total_Length,Pin,Fitting_position,No_of_Holes,
-Bolt_Hole_Circle_Dia,Inner_Dia,Outer_Dia,Teeth_wheel_side,Teeth_Diff_Side,prod_status FROM rollco_ms_product WHERE catid='" . $prId . "' AND makeid='" . $mkId . "' AND modelid='" . $modId . "' AND proyrid='" . $yrId . "' ";
+Bolt_Hole_Circle_Dia,Inner_Dia,Outer_Dia,Teeth_wheel_side,Teeth_Diff_Side,prod_status,Min_Th,Max_Th,Centre_Dia,PCD,Disc_Type,Width,F_R,prod_status FROM rollco_ms_product WHERE catid='" . $prId . "' AND makeid='" . $mkId . "' AND modelid='" . $modId . "' AND proyrid='" . $yrId . "' ";
 
                 //debug($ids);die;
                 if (checkIssetNotEmpty($roll_exact_ccm) && $roll_exact_ccm > 0) {
@@ -200,21 +202,25 @@ Bolt_Hole_Circle_Dia,Inner_Dia,Outer_Dia,Teeth_wheel_side,Teeth_Diff_Side,prod_s
                     $userData = getUserName($_SESSION['u_id']);
                     $snf_user = $_SESSION['firstName'] . ' ' . $_SESSION['lastName'] . ' ' . $_SESSION['com_emailAddress'] . ' ' . $_SESSION['customerID'];
                 }
+                
                 $productSql = "SELECT pr.prod_id,pr.prod_img1,pr.prod_nm,pr.catid,pr.prod_stock,pr.prod_part_no,pr.prod_volt,pr.prod_out,pr.prod_regu,pr.prod_pull_type,pr.prod_fan,pr.prod_teeth,pr.
 prod_trans,pr.prod_rot,pr.prod_dim,pr.prod_add_inf,pr.prod_overview,pr.ptype,pr.catid,pr.prod_dim,pr.position,pr.gr,pr.car_fits,pr.fuel,pr.external_teeth,pr.internal_teeth,pr.diameter,pr.
 height,pr.abs_ring,pr.Weight,pr.Disc_Dia,pr.Disc_Thick,pr.Piston_Dia,pr.Man,pr.Pump_Type,pr.Pressure,pr.Pully_Ribs,pr.Total_Length,pr.Pin,pr.Fitting_position,pr.No_of_Holes,pr.
-Bolt_Hole_Circle_Dia,pr.Inner_Dia,pr.Outer_Dia,Teeth_wheel_side,Teeth_Diff_Side,pr.prod_status FROM rollco_ms_product as pr WHERE pr.prod_part_no='" . $part_no . "'  LIMIT 1";
+Bolt_Hole_Circle_Dia,pr.Inner_Dia,pr.Outer_Dia,Teeth_wheel_side,Teeth_Diff_Side,Min_Th,Max_Th,Centre_Dia,PCD,Disc_Type,Width,F_R,prod_status FROM rollco_ms_product as pr WHERE pr.prod_part_no='" . $part_no . "'  LIMIT 1";
 
                 $numrows = $sq->numsrow($productSql);
+                 
                 if ($numrows > 0) {
                     $pro = 1;
                     $prData = $sq->fearr($productSql);
+                    
                     $spareserSql = "SELECT prod_id FROM rollco_search_found WHERE prod_id='" . $prData['prod_id'] . "' AND user_id='" . $u_id . "'";
                     $numsrowspr = $sq->numsrow($spareserSql);
                     if ($numsrowspr == 0) {
                         $serchdatasql = "INSERT INTO rollco_search_found SET user_id='" . $u_id . "',prod_id='" . $prData['prod_id'] . "',spr_id='0',u_ip='" . $_SERVER['REMOTE_ADDR'] . "',user_info='" . $snf_user . "',user_browser='" . $_SERVER['HTTP_USER_AGENT'] . "',user_platform='" . $plateform . "',user_county='" . $userData['com_state'] . "',user_cntry='" . $userData['Country'] . "',user_city='" . $userData['com_city'] . "'";
                         $sq->query($serchdatasql);
                     }
+                   
                 } else {
 
                     $crrefSql = "SELECT rc_num FROM rollco_ms_crossref WHERE crossref_oem = '" . $part_no . "' GROUP BY rc_num";
@@ -234,7 +240,7 @@ Bolt_Hole_Circle_Dia,pr.Inner_Dia,pr.Outer_Dia,Teeth_wheel_side,Teeth_Diff_Side,
                         $productSql = "SELECT pr.prod_id,pr.prod_img1,pr.prod_nm,pr.catid,pr.prod_stock,pr.prod_part_no,pr.prod_volt,pr.prod_out,pr.prod_regu,pr.prod_pull_type,pr.prod_fan,pr.prod_teeth,pr.prod_trans,pr.prod_rot,pr.prod_dim,pr.prod_add_inf,
 						pr.prod_overview,pr.prod_dim,pr.position,pr.gr,pr.car_fits,pr.fuel,pr.external_teeth,pr.internal_teeth,pr.diameter,pr.
 height,pr.abs_ring,pr.Weight,pr.Disc_Dia,pr.Disc_Thick,pr.Piston_Dia,pr.Man,pr.Pump_Type,pr.Pressure,pr.Pully_Ribs,pr.Total_Length,pr.Pin,pr.Fitting_position,pr.No_of_Holes,pr.
-Bolt_Hole_Circle_Dia,pr.Inner_Dia,pr.Outer_Dia,pr.Teeth_wheel_side,pr.Teeth_Diff_Side,pr.prod_status  FROM rollco_ms_product as pr WHERE ";
+Bolt_Hole_Circle_Dia,pr.Inner_Dia,pr.Outer_Dia,pr.Teeth_wheel_side,pr.Teeth_Diff_Side,pr.prod_status,pr.prod_status,pr.Min_Th,pr.Max_Th,pr.Centre_Dia,pr.PCD,pr.Disc_Type,pr.Width,pr.F_R  FROM rollco_ms_product as pr WHERE ";
 
                         if (count($crefArr) == 1) {
                             $crefData = $sq->fearr($crrefSql);
@@ -294,7 +300,7 @@ Bolt_Hole_Circle_Dia,pr.Inner_Dia,pr.Outer_Dia,pr.Teeth_wheel_side,pr.Teeth_Diff
                 $productSql = "SELECT prod_id,prod_img1,prod_nm,catid,prod_stock,prod_part_no,prod_volt,prod_out,prod_regu,prod_pull_type,prod_fan,prod_teeth,
 prod_trans,prod_rot,prod_dim,prod_add_inf,prod_overview,prod_dim,position,gr,car_fits,fuel,external_teeth,internal_teeth,diameter,
 height,abs_ring,Weight,Disc_Dia,Disc_Thick,Piston_Dia,Man,Pump_Type,Pressure,Pully_Ribs,Total_Length,Pin,Fitting_position,No_of_Holes,
-Bolt_Hole_Circle_Dia,Inner_Dia,Outer_Dia,Teeth_wheel_side,Teeth_Diff_Side,prod_status FROM rollco_ms_product WHERE prod_part_no='" . $part_no . "'   LIMIT 1 ";
+Bolt_Hole_Circle_Dia,Inner_Dia,Outer_Dia,Teeth_wheel_side,Teeth_Diff_Side,prod_status,Min_Th,Max_Th,Centre_Dia,PCD,Disc_Type,Width,F_R FROM rollco_ms_product WHERE prod_part_no='" . $part_no . "'   LIMIT 1 ";
 //        ECHO $productSql;
 //DIE();
 //            
@@ -314,6 +320,7 @@ Bolt_Hole_Circle_Dia,Inner_Dia,Outer_Dia,Teeth_wheel_side,Teeth_Diff_Side,prod_s
                     }
                 }
             }
+
             ?>
             <?php if ($pro && $prData['prod_status']) { ?>
                 <article class=" clearfix aos-item  faqOrdNews" data-aos='fade-up'>

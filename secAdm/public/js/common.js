@@ -1437,7 +1437,7 @@ $(document).on('click', '.editProd', function () {
             }
 
             if (data['ptype'] != undefined) {
-                $('.ptype').attr('checked', true);
+                $('.ptype').prop('checked', true);
                 $('#ptype').attr('disabled', false);
                 $('#ptype').val(data['ptype']);
             }
@@ -2795,188 +2795,223 @@ $(document).on('click', '.editProdDesc', function () {
 
 
             if (data['prod_dim'] != undefined && data['prod_dim'] != '') {
-                $('.prod_dim').attr('checked', true);
+                $('.prod_dim').prop('checked', true);
                 $('#prod_dim').attr('disabled', false);
                 $('#prod_dim').val(data['prod_dim']);
             }
             if (data['prod_volt'] != undefined && data['prod_volt'] != '') {
-                $('.prod_volt').attr('checked', true);
+                $('.prod_volt').prop('checked', true);
                 $('#prod_volt').attr('disabled', false);
                 $('#prod_volt').val(data['prod_volt']);
             }
             if (data['prod_out'] != undefined && data['prod_out'] != '') {
-                $('.prod_out').attr('checked', true);
+                $('.prod_out').prop('checked', true);
                 $('#prod_out').attr('disabled', false);
                 $('#prod_out').val(data['prod_out']);
             }
             if (data['prod_regu'] != undefined && data['prod_regu'] != '') {
-                $('.prod_regu').attr('checked', true);
+                $('.prod_regu').prop('checked', true);
                 $('#prod_regu').attr('disabled', false);
                 $('#prod_regu').val(data['prod_regu']);
             }
             if (data['prod_pull_type'] != undefined && data['prod_pull_type'] != '') {
-                $('.prod_pull_type').attr('checked', true);
+                $('.prod_pull_type').prop('checked', true);
                 $('#prod_pull_type').attr('disabled', false);
                 $('#prod_pull_type').val(data['prod_pull_type']);
             }
             if (data['prod_fan'] != undefined && data['prod_fan'] != '') {
-                $('.prod_fan').attr('checked', true);
+                $('.prod_fan').prop('checked', true);
                 $('#prod_fan').attr('disabled', false);
                 $('#prod_fan').val(data['prod_fan']);
             }
             if (data['prod_teeth'] != undefined && data['prod_teeth'] != '') {
-                $('.prod_teeth').attr('checked', true);
+                $('.prod_teeth').prop('checked', true);
                 $('#prod_teeth').attr('disabled', false);
                 $('#prod_teeth').val(data['prod_teeth']);
             }
             if (data['prod_trans'] != undefined && data['prod_trans'] != '') {
-                $('.prod_trans').attr('checked', true);
+                $('.prod_trans').prop('checked', true);
                 $('#prod_trans').attr('disabled', false);
                 $('#prod_trans').val(data['prod_trans']);
             }
             if (data['prod_rot'] != undefined && data['prod_rot'] != '') {
-                $('.prod_rot').attr('checked', true);
+                $('.prod_rot').prop('checked', true);
                 $('#prod_rot').attr('disabled', false);
                 $('#prod_rot').val(data['prod_rot']);
             }
 
             if (data['ptype'] != undefined && data['ptype'] != '') {
-                $('.ptype').attr('checked', true);
+                $('.ptype').prop('checked', true);
                 $('#ptype').attr('disabled', false);
                 $('#ptype').val(data['ptype']);
             }
             if (data['position'] != undefined && data['position'] != '') {
-                $('.position').attr('checked', true);
+                $('.position').prop('checked', true);
                 $('#position').attr('disabled', false);
                 $('#position').val(data['position']);
             }
             if (data['gr'] != undefined && data['gr'] != '') {
-                $('.gr').attr('checked', true);
+                $('.gr').prop('checked', true);
                 $('#gr').attr('disabled', false);
                 $('#gr').val(data['gr']);
             }
             if (data['car_fits'] != undefined && data['car_fits'] != '') {
-                $('.car_fits').attr('checked', true);
+                $('.car_fits').prop('checked', true);
                 $('#car_fits').attr('disabled', false);
                 $('#car_fits').val(data['car_fits']);
             }
             if (data['fuel'] != undefined) {
-                $('.fuel').attr('checked', true);
+                $('.fuel').prop('checked', true);
                 $('#fuel').attr('disabled', false);
                 $('#fuel').val(data['fuel']);
             }
             if (data['external_teeth'] != undefined && data['external_teeth'] != '') {
-                $('.external_teeth').attr('checked', true);
+                $('.external_teeth').prop('checked', true);
                 $('#external_teeth').attr('disabled', false);
                 $('#external_teeth').val(data['external_teeth']);
             }
             if (data['internal_teeth'] != undefined && data['internal_teeth'] != '') {
-                $('.internal_teeth').attr('checked', true);
+                $('.internal_teeth').prop('checked', true);
                 $('#internal_teeth').attr('disabled', false);
                 $('#internal_teeth').val(data['internal_teeth']);
             }
             if (data['height'] != undefined && data['height'] != '') {
-                $('.height').attr('checked', true);
+                $('.height').prop('checked', true);
                 $('#height').attr('disabled', false);
                 $('#height').val(data['height']);
             }
             if (data['abs_ring'] != undefined && data['abs_ring'] != '') {
-                $('.abs_ring').attr('checked', true);
+                $('.abs_ring').prop('checked', true);
                 $('#abs_ring').attr('disabled', false);
                 $('#abs_ring').val(data['abs_ring']);
             }
             if (data['cylinders'] != undefined && data['cylinders'] != '') {
-                $('.cylinders').attr('checked', true);
+                $('.cylinders').prop('checked', true);
                 $('#cylinders').attr('disabled', false);
                 $('#cylinders').val(data['Piston_Dia']);
             }
             // start/end
             if (data['Weight'] != undefined && data['Weight'] != '') {
-                $('.Weight').attr('checked', true);
+                $('.Weight').prop('checked', true);
                 $('#Weight').attr('disabled', false);
                 $('#Weight').val(data['Weight']);
             }
             if (data['Disc_Dia'] != undefined && data['Disc_Dia'] != '') {
-                $('.Disc_Dia').attr('checked', true);
+                $('.Disc_Dia').prop('checked', true);
                 $('#Disc_Dia').attr('disabled', false);
                 $('#Disc_Dia').val(data['Disc_Dia']);
             }
             if (data['Disc_Thick'] != undefined && data['Disc_Thick'] != '') {
-                $('.Disc_Thick').attr('checked', true);
+                $('.Disc_Thick').prop('checked', true);
                 $('#Disc_Thick').attr('disabled', false);
                 $('#Disc_Thick').val(data['Disc_Thick']);
             }
             if (data['Piston_Dia'] != undefined && data['Piston_Dia'] != '') {
-                $('.Piston_Dia').attr('checked', true);
+                $('.Piston_Dia').prop('checked', true);
                 $('#Piston_Dia').attr('disabled', false);
                 $('#Piston_Dia').val(data['Piston_Dia']);
             }
             if (data['Man'] != undefined && data['Man'] != '') {
-                $('.Man').attr('checked', true);
+                $('.Man').prop('checked', true);
                 $('#Man').attr('disabled', false);
                 $('#Man').val(data['Man']);
             }
             if (data['Pump_Type'] != undefined && data['Pump_Type'] != '') {
-                $('.Pump_Type').attr('checked', true);
+                $('.Pump_Type').prop('checked', true);
                 $('#Pump_Type').attr('disabled', false);
                 $('#Pump_Type').val(data['Pump_Type']);
             }
             if (data['Pressure'] != undefined && data['Pressure'] != '') {
-                $('.Pressure').attr('checked', true);
+                $('.Pressure').prop('checked', true);
                 $('#Pressure').attr('disabled', false);
                 $('#Pressure').val(data['Pressure']);
             }
             if (data['Pully_Ribs'] != undefined && data['Pully_Ribs'] != '') {
-                $('.Pully_Ribs').attr('checked', true);
+                $('.Pully_Ribs').prop('checked', true);
                 $('#Pully_Ribs').attr('disabled', false);
                 $('#Pully_Ribs').val(data['Pully_Ribs']);
             }
             if (data['Total_Length'] != undefined && data['Total_Length'] != '') {
-                $('.Total_Length').attr('checked', true);
+                $('.Total_Length').prop('checked', true);
                 $('#Total_Length').attr('disabled', false);
                 $('#Total_Length').val(data['Total_Length']);
             }
             if (data['Pin'] != undefined && data['Pin'] != '') {
-                $('.Pin').attr('checked', true);
+                $('.Pin').prop('checked', true);
                 $('#Pin').attr('disabled', false);
                 $('#Pin').val(data['Pin']);
             }
             if (data['Fitting_position'] != undefined && data['Fitting_position'] != '') {
-                $('.Fitting_position').attr('checked', true);
+                $('.Fitting_position').prop('checked', true);
                 $('#Fitting_position').attr('disabled', false);
                 $('#Fitting_position').val(data['Fitting_position']);
             }
             if (data['No_of_Holes'] != undefined && data['No_of_Holes'] != '') {
-                $('.No_of_Holes').attr('checked', true);
+                $('.No_of_Holes').prop('checked', true);
                 $('#No_of_Holes').attr('disabled', false);
                 $('#No_of_Holes').val(data['No_of_Holes']);
             }
             if (data['Bolt_Hole_Circle_Dia'] != undefined && data['Bolt_Hole_Circle_Dia'] != '') {
-                $('.Bolt_Hole_Circle_Dia').attr('checked', true);
+                $('.Bolt_Hole_Circle_Dia').prop('checked', true);
                 $('#Bolt_Hole_Circle_Dia').attr('disabled', false);
                 $('#Bolt_Hole_Circle_Dia').val(data['Bolt_Hole_Circle_Dia']);
             }
             if (data['Inner_Dia'] != undefined && data['Inner_Dia'] != '') {
-                $('.Inner_Dia').attr('checked', true);
+                $('.Inner_Dia').prop('checked', true);
                 $('#Inner_Dia').attr('disabled', false);
                 $('#Inner_Dia').val(data['Inner_Dia']);
             }
             if (data['Outer_Dia'] != undefined && data['Outer_Dia'] != '') {
-                $('.Outer_Dia').attr('checked', true);
+                $('.Outer_Dia').prop('checked', true);
                 $('#Outer_Dia').attr('disabled', false);
                 $('#Outer_Dia').val(data['Outer_Dia']);
             }
 
             if (data['Teeth_wheel_side'] != undefined && data['Teeth_wheel_side'] != '') {
-                $('.Teeth_wheel_side').attr('checked', true);
+                $('.Teeth_wheel_side').prop('checked', true);
                 $('#Teeth_wheel_side').attr('disabled', false);
                 $('#Teeth_wheel_side').val(data['Teeth_wheel_side']);
             }
 
             if (data['Teeth_Diff_Side'] != undefined && data['Teeth_Diff_Side'] != '') {
-                $('.Teeth_Diff_Side').attr('checked', true);
+                $('.Teeth_Diff_Side').prop('checked', true);
                 $('#Teeth_Diff_Side').attr('disabled', false);
                 $('#Teeth_Diff_Side').val(data['Teeth_Diff_Side']);
+            }
+            if (data['Min_Th'] != undefined && data['Min_Th'] != '') {
+                $('.Min_Th').prop('checked', true);
+                $('#pr_Min_Th').attr('disabled', false);
+                $('#pr_Min_Th').val(data['Min_Th']);
+            }
+            if (data['Max_Th'] != undefined && data['Max_Th'] != '') {
+                $('.Max_Th').prop('checked', true);
+                $('#pr_Max_Th').attr('disabled', false);
+                $('#pr_Max_Th').val(data['Max_Th']);
+            }
+            if (data['Centre_Dia'] != undefined && data['Centre_Dia'] != '') {
+                $('.Centre_Dia').prop('checked', true);
+                $('#pr_Centre_Dia').attr('disabled', false);
+                $('#pr_Centre_Dia').val(data['Centre_Dia']);
+            }
+            if (data['PCD'] != undefined && data['PCD'] != '') {
+                $('.PCD').prop('checked', true);
+                $('#pr_PCD').attr('disabled', false);
+                $('#pr_PCD').val(data['PCD']);
+            }
+            if (data['Disc_Type'] != undefined && data['Disc_Type'] != '') {
+                $('.Disc_Type').prop('checked', true);
+                $('#pr_Disc_Type').attr('disabled', false);
+                $('#pr_Disc_Type').val(data['Disc_Type']);
+            }
+            if (data['Width'] != undefined && data['Width'] != '') {
+                $('.Width').prop('checked', true);
+                $('#pr_Width').attr('disabled', false);
+                $('#pr_Width').val(data['Width']);
+            }
+            if (data['F_R'] != undefined && data['F_R'] != '') {
+                $('.F_R').prop('checked', true);
+                $('#pr_F_R').attr('disabled', false);
+                $('#pr_F_R').val(data['F_R']);
             }
 
 
@@ -3393,6 +3428,34 @@ $(document).on('click', '.restoreDelCustomer', function () {
         success: function (data) {
 
             alert("Customer data restored successfully");
+            location.reload();
+        },
+        error: function (request, error)
+        {
+            alert("Error while edit  data");
+        }
+    });
+});
+$(document).on('click', '.restoreDelTempUser', function () {
+
+    var customer_id = $(this).data('id');
+
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+    $.ajax({
+        url: GlblURLs + 'admin/restore-deltempuser-ajax',
+        type: 'POST',
+        data: {
+            'id': customer_id,
+            '_token': $('meta[name="csrf_token"]').attr('content')
+        },
+        dataType: 'JSON',
+        success: function (data) {
+
+            alert("Temp Customer data restored successfully");
             location.reload();
         },
         error: function (request, error)

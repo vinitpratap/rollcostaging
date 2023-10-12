@@ -261,5 +261,47 @@
 				<td><?php echo $prData['prod_add_inf']; ?></td>
 			</tr>
 		<?php } ?>
+		<?php if (isset($prData['Min_Th'])  && $prData['Min_Th'] !='') { ?>
+			<tr>
+				<td>Min Th</td>
+				<td><?php echo $prData['Min_Th']; ?></td>
+			</tr>
+		<?php } ?>
+		<?php if (isset($prData['Max_Th'])  && $prData['Max_Th'] !='') { ?>
+			<tr>
+				<td>Max Th</td>
+				<td><?php echo $prData['Max_Th']; ?></td>
+			</tr>
+		<?php } ?>
+		<?php if (isset($prData['Centre_Dia'])  && $prData['Centre_Dia'] !='') { ?>
+			<tr>
+				<td>Centre Dia.</td>
+				<td><?php echo $prData['Centre_Dia']; ?></td>
+			</tr>
+		<?php } ?>
+		<?php if (isset($prData['PCD'])  && $prData['PCD'] !='') { ?>
+			<tr>
+				<td>PCD</td>
+				<td><?php echo $prData['PCD']; ?></td>
+			</tr>
+		<?php } ?>
+		<?php if (isset($prData['Disc_Type'])  && $prData['Disc_Type'] !='') { ?>
+			<tr>
+				<td>Disc Type</td>
+				<td><?php echo $prData['Disc_Type']; ?></td>
+			</tr>
+		<?php } ?>
+		<?php if (isset($prData['Width'])  && $prData['Width'] !='') { ?>
+			<tr>
+				<td>Width</td>
+				<td><?php echo $prData['Width']; ?></td>
+			</tr>
+		<?php } ?>
+		<?php if (isset($prData['F_R'])  && $prData['F_R'] !='') { ?>
+			<tr>
+				<td>F/R</td>
+				<td><?php echo $prData['F_R']; ?></td>
+			</tr>
+		<?php } ?>
 	</tbody>
 </table>

@@ -457,6 +457,14 @@ Route::prefix('admin')->group(function () {
     Route::post('edit-deluser', 'DelUserController@EditDelUser')->name('deluser.edit');
     Route::get('delete-deluser/{id}', 'DelUserController@DeleteDelUser')->name('deluser.delete');
     Route::get('data-deluser/{id}', 'DelUserController@GetDelUserData1')->name('deluser.getdata');
-        Route::get('export-delcustomer-excel',
+    Route::get('export-delcustomer-excel',
             'DelUserController@exportToExcelDelCustomer')->name('delcustomer.export');
+
+    Route::get('view-deltempuser', 'DelTempUserController@DelTempUsers')->name('deltempuser.manage');
+    Route::post('restore-deltempuser-ajax', 'DelTempUserController@RestoreDelTempUserData')->name('deltempuser.data');
+    Route::post('edit-deltempuser', 'DelTempUserController@EditDelTempUser')->name('deltempuser.edit');
+    Route::get('delete-deltempuser/{id}', 'DelTempUserController@DeleteDelTempUser')->name('deltempuser.delete');
+    Route::get('data-deltempuser/{id}', 'DelTempUserController@GetDelTempUserData1')->name('deltempuser.getdata');
+    Route::get('export-deltempuser-excel',
+            'DelTempUserController@exportToExcelDelTempUser')->name('deltempuser.export');
 });

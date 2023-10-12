@@ -57,7 +57,7 @@
                             <h2 id="titleText" >Upload Products Detail</h2>
                             <label for="products_file">File</label>
                             <input  name="products_file_detail" type="file" id="products_file_detail" >
-                            <a href="{{URL('Demo')}}/demo_productdetailsv4.csv" class="d-block "> Download sample file</a>
+                            <a href="{{URL('Demo')}}/demo_productdetailsv5.csv" class="d-block "> Download sample file</a>
                         </div>
                         <button type="submit" class="btn btn-secondary pl-4 pr-4 pt-2 pb-2  m-0 text-uppercase" id="submitUproducts">Upload </button>
 

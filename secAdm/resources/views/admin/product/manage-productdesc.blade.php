@@ -10,7 +10,7 @@
             </div>
 
             <div class="x_content pt-4 mb-3 col-12 clearfix">
-			    @if (count($errors) > 0)
+                @if (count($errors) > 0)
                 <div class="alert alert-danger">
                     <strong>Whoops!</strong> There were some problems with your input.								
                     @foreach ($errors->all() as $error)
@@ -34,11 +34,12 @@
                             <div class="col-md-4 mb-3 padRig">
                                 <label>Show Entries</label>
                                 <select class="form-control select" id="data_entries" name="data_entries" >                                    @foreach($pagination_arr as $val)
-                                    <option value="{{$val}}" <?php if(app('request')->input('data_entries') == $val) {?> selected <?php } ?>>{{$val}}</option>
+                                    <option value="{{$val}}" <?php if (app('request')->input('data_entries')
+        == $val) { ?> selected <?php } ?>>{{$val}}</option>
                                     @endforeach
                                 </select>
                             </div>
-                            
+
                             <div class="col-md-4 mb-3 pt-35 padRig">
                                 <button type="submit" class="btn btn-secondary pl-4 pr-4 pt-2 pb-2  m-0 text-uppercase">Search</button>
                             </div>
@@ -61,10 +62,10 @@
                             </tr>
                         </thead>
                         <tbody>
-                            
-                            <?php $i = 1;?>
+
+                            <?php $i = 1; ?>
                             @foreach($data as $key=>$value)
-                            <?php 
+                            <?php
                             $apCount = getapCount($value->prod_part_no);
                             ?>
 
@@ -73,11 +74,11 @@
                                 <td>{{getCatName($value->catid)}}</td>
                                 <td>{{$value->prod_nm}}</td>
                                 <td>
-                                   @if($value->prod_status == 1) Enable @else Disable @endif 
+                                    @if($value->prod_status == 1) Enable @else Disable @endif 
                                 </td>
                                 <td class="last">
                                     <a href="javascript:void(0);" title="Edit" class="mr-4 ml-2 d-inline-block"><img data-id="{{base64_encode($value->prod_nm)}}" class="editProdDesc" src="{{ URL::asset('images/edit.svg') }}" alt=""></a> 
-                                  
+
                                 </td>
                                 <td class="last">                                     
                                     <a href="{{route('prodimage.delete',base64_encode($value->prod_nm))}}"  title="Delete" class="d-inline-block delete confirmation1"><img src="{{ URL::asset('images/delete.svg') }}" alt=""></a>
@@ -90,14 +91,14 @@
                 </div>
 
             </div>
-                    {{ $data->links('common.custompagination') }}
+            {{ $data->links('common.custompagination') }}
             <div class="clearfix"></div>
 <?php if (count($data) > 0) { ?>
                 <div class="row  m-0">
                     <div class="col-6"><span>Total  {{ $data->total() }} records</span></div>
-                    
+
                 </div>
-            <?php } ?>
+<?php } ?>
 
 
         </div>
@@ -130,8 +131,8 @@
                 @endif
 
                 <div class="row mt-4">
-				
-					<div class="col-md-3 mb-3">
+
+                    <div class="col-md-3 mb-3">
                         <label for="status">Name</label>
                         @if ($errors->has('prod_nm'))
                         <span class="help-block">
@@ -140,7 +141,7 @@
                         @endif
                         <input type="text" class="form-control " autocomplete="off" id="prod_nm" name="prod_nm" placeholder="Product Name" >
                     </div>
-					
+
                     <div class="col-md-3 mb-3">
                         <label for="status">Part No</label>
                         @if ($errors->has('prod_part_no'))
@@ -151,7 +152,7 @@
                         <input type="text" class="form-control " autocomplete="off" id="prod_part_no" name="prod_part_no" placeholder="Product Part No" >
                     </div>
 
-                    
+
                     <div class="col-md-3 mb-3">
                         <label for="add_inf">Add. Info</label>
                         @if ($errors->has('prod_add_inf'))
@@ -162,7 +163,7 @@
                         <input type="text" class="form-control " autocomplete="off" id="prod_add_inf" name="prod_add_inf" placeholder="Product Add. Info" >
                     </div>
 
-                    
+
                     <div class="col-md-3 mb-3">
 
                         <label for="status" >Stock</label>
@@ -190,7 +191,7 @@
                         @endif
                         <input type="text" class="form-control " autocomplete="off" id="ptype" name="ptype" placeholder="Product Type" disabled="disabled">
                     </div>
-                    
+
                     <div class="col-md-3 mb-3">
                         <label for="position" onclick="changeInputState('position')">
                             <input type="checkbox" name="push" class="custom-control-input position" id="prposition" >
@@ -308,8 +309,8 @@
 
                     <div class="col-md-3 mb-3">
                         <label for="prot" onclick="changeInputState('prod_rot')">
-                        <input type="checkbox" name="push" class="custom-control-input prod_rot" id="prot" >
-                        <span class="notreq">Rotation</span></label>
+                            <input type="checkbox" name="push" class="custom-control-input prod_rot" id="prot" >
+                            <span class="notreq">Rotation</span></label>
                         @if ($errors->has('prod_rot'))
                         <span class="help-block">
                             <strong>{{ $errors->first('prod_rot') }}</strong>
@@ -317,11 +318,11 @@
                         @endif
                         <input type="text" class="form-control " autocomplete="off" id="prod_rot" name="prod_rot" placeholder="Product rotation" disabled="disabled">
                     </div>
-                    
+
                     <div class="col-md-3 mb-3">
                         <label for="car_fits" onclick="changeInputState('car_fits')">
-                        <input type="checkbox" name="push" class="custom-control-input car_fits" id="prcar_fits" >
-                        <span class="notreq">Car Fits</span></label>
+                            <input type="checkbox" name="push" class="custom-control-input car_fits" id="prcar_fits" >
+                            <span class="notreq">Car Fits</span></label>
                         @if ($errors->has('car_fits'))
                         <span class="help-block">
                             <strong>{{ $errors->first('car_fits') }}</strong>
@@ -333,11 +334,11 @@
                 </div>
 
                 <div class="row mt-4">
-                    
+
                     <div class="col-md-3 mb-3">
                         <label for="fuel" onclick="changeInputState('fuel')">
-                        <input type="checkbox" name="push" class="custom-control-input fuel" id="prfuel" >
-                        <span class="notreq">Fuel</span></label>
+                            <input type="checkbox" name="push" class="custom-control-input fuel" id="prfuel" >
+                            <span class="notreq">Fuel</span></label>
                         @if ($errors->has('fuel'))
                         <span class="help-block">
                             <strong>{{ $errors->first('fuel') }}</strong>
@@ -345,11 +346,11 @@
                         @endif
                         <input type="text" class="form-control" autocomplete="off" id="fuel" name="fuel" placeholder="Product Fuel" disabled="disabled">
                     </div>
-                    
+
                     <div class="col-md-3 mb-3">
                         <label for="external_teeth" onclick="changeInputState('external_teeth')">
-                        <input type="checkbox" name="push" class="custom-control-input external_teeth" id="prexternal_teeth" >
-                        <span class="notreq">External Teeth</span></label>
+                            <input type="checkbox" name="push" class="custom-control-input external_teeth" id="prexternal_teeth" >
+                            <span class="notreq">External Teeth</span></label>
                         @if ($errors->has('external_teeth'))
                         <span class="help-block">
                             <strong>{{ $errors->first('external_teeth') }}</strong>
@@ -357,11 +358,11 @@
                         @endif
                         <input type="text" class="form-control" autocomplete="off" id="external_teeth" name="external_teeth" placeholder="Product External Teeth" disabled="disabled">
                     </div>
-                    
+
                     <div class="col-md-3 mb-3">
                         <label for="internal_teeth" onclick="changeInputState('internal_teeth')">
-                        <input type="checkbox" name="push" class="custom-control-input internal_teeth" id="printernal_teeth" >
-                        <span class="notreq">Internal Teeth</span></label>
+                            <input type="checkbox" name="push" class="custom-control-input internal_teeth" id="printernal_teeth" >
+                            <span class="notreq">Internal Teeth</span></label>
                         @if ($errors->has('internal_teeth'))
                         <span class="help-block">
                             <strong>{{ $errors->first('internal_teeth') }}</strong>
@@ -369,11 +370,11 @@
                         @endif
                         <input type="text" class="form-control" autocomplete="off" id="internal_teeth" name="internal_teeth" placeholder="Product Internal Teeth" disabled="disabled">
                     </div>
-                    
+
                     <div class="col-md-3 mb-3">
                         <label for="height" onclick="changeInputState('height')">
-                        <input type="checkbox" name="push" class="custom-control-input height" id="prheight" >
-                        <span class="notreq">Height</span></label>
+                            <input type="checkbox" name="push" class="custom-control-input height" id="prheight" >
+                            <span class="notreq">Height</span></label>
                         @if ($errors->has('height'))
                         <span class="help-block">
                             <strong>{{ $errors->first('height') }}</strong>
@@ -385,11 +386,11 @@
                 </div>
 
                 <div class="row mt-4">
-                    
+
                     <div class="col-md-3 mb-3">
                         <label for="abs_ring" onclick="changeInputState('abs_ring')">
-                        <input type="checkbox" name="push" class="custom-control-input abs_ring" id="prabs_ring" >
-                        <span class="notreq">Number of Teeth, ABS ring</span></label>
+                            <input type="checkbox" name="push" class="custom-control-input abs_ring" id="prabs_ring" >
+                            <span class="notreq">Number of Teeth, ABS ring</span></label>
                         @if ($errors->has('abs_ring'))
                         <span class="help-block">
                             <strong>{{ $errors->first('abs_ring') }}</strong>
@@ -397,11 +398,11 @@
                         @endif
                         <input type="text" class="form-control" autocomplete="off" id="abs_ring" name="abs_ring" placeholder="Product Abs Ring" disabled="disabled">
                     </div>
-                    
+
                     <div class="col-md-3 mb-3">
                         <label for="pdim" onclick="changeInputState('prod_dim')">
-                        <input type="checkbox" name="push" class="custom-control-input prod_dim" id="pdim" >
-                        <span class="notreq">Dimension</span></label>
+                            <input type="checkbox" name="push" class="custom-control-input prod_dim" id="pdim" >
+                            <span class="notreq">Dimension</span></label>
                         @if ($errors->has('prod_dim'))
                         <span class="help-block">
                             <strong>{{ $errors->first('prod_dim') }}</strong>
@@ -409,11 +410,11 @@
                         @endif
                         <input type="text" class="form-control " autocomplete="off" id="prod_dim" name="prod_dim" placeholder="Product dimension" disabled="disabled" >
                     </div>
-                    
+
                     <div class="col-md-3 mb-3">
                         <label for="cylinders" onclick="changeInputState('cylinders')">
-                        <input type="checkbox" name="push" class="custom-control-input cylinders" id="prcylinders" >
-                        <span class="notreq">Cylinders</span></label>
+                            <input type="checkbox" name="push" class="custom-control-input cylinders" id="prcylinders" >
+                            <span class="notreq">Cylinders</span></label>
                         @if ($errors->has('cylinders'))
                         <span class="help-block">
                             <strong>{{ $errors->first('cylinders') }}</strong>
@@ -421,11 +422,11 @@
                         @endif
                         <input type="text" class="form-control " autocomplete="off" id="cylinders" name="cylinders" placeholder="Product cylinders" disabled="disabled" >
                     </div>
-					
-					<div class="col-md-3 mb-3">
+
+                    <div class="col-md-3 mb-3">
                         <label for="Weight" onclick="changeInputState('Weight')">
-                        <input type="checkbox" name="push" class="custom-control-input Weight" id="prcy_weight" >
-                        <span class="notreq">Weight</span></label>
+                            <input type="checkbox" name="push" class="custom-control-input Weight" id="prcy_weight" >
+                            <span class="notreq">Weight</span></label>
                         @if ($errors->has('Weight'))
                         <span class="help-block">
                             <strong>{{ $errors->first('Weight') }}</strong>
@@ -433,17 +434,17 @@
                         @endif
                         <input type="text" class="form-control " autocomplete="off" id="Weight" name="Weight" placeholder="Product Weight" disabled="disabled" >
                     </div>
-                    
-                    
-                    
+
+
+
                 </div>
-				
-				<div class="row mt-4">
-                    
+
+                <div class="row mt-4">
+
                     <div class="col-md-3 mb-3">
                         <label for="Disc_Dia" onclick="changeInputState('Disc_Dia')">
-                        <input type="checkbox" name="push" class="custom-control-input Disc_Dia" id="prDisc_Dia" >
-                        <span class="notreq">Disc Dia.</span></label>
+                            <input type="checkbox" name="push" class="custom-control-input Disc_Dia" id="prDisc_Dia" >
+                            <span class="notreq">Disc Dia.</span></label>
                         @if ($errors->has('Disc_Dia'))
                         <span class="help-block">
                             <strong>{{ $errors->first('Disc_Dia') }}</strong>
@@ -451,11 +452,11 @@
                         @endif
                         <input type="text" class="form-control" autocomplete="off" id="Disc_Dia" name="Disc_Dia" placeholder="Product Disc Dia" disabled="disabled">
                     </div>
-                    
+
                     <div class="col-md-3 mb-3">
                         <label for="Disc_Thick" onclick="changeInputState('Disc_Thick')">
-                        <input type="checkbox" name="push" class="custom-control-input Disc_Thick" id="prDisc_Thick" >
-                        <span class="notreq">Disc Thick</span></label>
+                            <input type="checkbox" name="push" class="custom-control-input Disc_Thick" id="prDisc_Thick" >
+                            <span class="notreq">Disc Thick</span></label>
                         @if ($errors->has('Disc_Thick'))
                         <span class="help-block">
                             <strong>{{ $errors->first('Disc_Thick') }}</strong>
@@ -463,11 +464,11 @@
                         @endif
                         <input type="text" class="form-control " autocomplete="off" id="Disc_Thick" name="Disc_Thick" placeholder="Disc Thick" disabled="disabled" >
                     </div>
-                    
+
                     <div class="col-md-3 mb-3">
                         <label for="Piston_Dia" onclick="changeInputState('Piston_Dia')">
-                        <input type="checkbox" name="push" class="custom-control-input Piston_Dia" id="prPiston_Dia" >
-                        <span class="notreq">Piston Dia</span></label>
+                            <input type="checkbox" name="push" class="custom-control-input Piston_Dia" id="prPiston_Dia" >
+                            <span class="notreq">Piston Dia</span></label>
                         @if ($errors->has('Piston_Dia'))
                         <span class="help-block">
                             <strong>{{ $errors->first('Piston_Dia') }}</strong>
@@ -475,11 +476,11 @@
                         @endif
                         <input type="text" class="form-control " autocomplete="off" id="Piston_Dia" name="Piston_Dia" placeholder="Piston Dia" disabled="disabled" >
                     </div>
-					
-					<div class="col-md-3 mb-3">
+
+                    <div class="col-md-3 mb-3">
                         <label for="Man" onclick="changeInputState('Man')">
-                        <input type="checkbox" name="push" class="custom-control-input Man" id="prMan" >
-                        <span class="notreq">Man</span></label>
+                            <input type="checkbox" name="push" class="custom-control-input Man" id="prMan" >
+                            <span class="notreq">Man</span></label>
                         @if ($errors->has('Man'))
                         <span class="help-block">
                             <strong>{{ $errors->first('Man') }}</strong>
@@ -487,18 +488,18 @@
                         @endif
                         <input type="text" class="form-control " autocomplete="off" id="Man" name="Man" placeholder="Product Man" disabled="disabled" >
                     </div>
-                    
-                    
-                    
+
+
+
                 </div>
 
 
-<div class="row mt-4">
-                    
+                <div class="row mt-4">
+
                     <div class="col-md-3 mb-3">
                         <label for="Pump_Type" onclick="changeInputState('Pump_Type')">
-                        <input type="checkbox" name="push" class="custom-control-input Pump_Type" id="prPump_Type" >
-                        <span class="notreq">Pump Type</span></label>
+                            <input type="checkbox" name="push" class="custom-control-input Pump_Type" id="prPump_Type" >
+                            <span class="notreq">Pump Type</span></label>
                         @if ($errors->has('Pump_Type'))
                         <span class="help-block">
                             <strong>{{ $errors->first('Pump_Type') }}</strong>
@@ -506,11 +507,11 @@
                         @endif
                         <input type="text" class="form-control" autocomplete="off" id="Pump_Type" name="Pump_Type" placeholder="Product Pump Type" disabled="disabled">
                     </div>
-                    
+
                     <div class="col-md-3 mb-3">
                         <label for="Pressure" onclick="changeInputState('Pressure')">
-                        <input type="checkbox" name="push" class="custom-control-input Pressure" id="prPressure" >
-                        <span class="notreq">Pressure</span></label>
+                            <input type="checkbox" name="push" class="custom-control-input Pressure" id="prPressure" >
+                            <span class="notreq">Pressure</span></label>
                         @if ($errors->has('Pressure'))
                         <span class="help-block">
                             <strong>{{ $errors->first('Pressure') }}</strong>
@@ -518,11 +519,11 @@
                         @endif
                         <input type="text" class="form-control " autocomplete="off" id="Pressure" name="Pressure" placeholder="Pressure" disabled="disabled" >
                     </div>
-                    
+
                     <div class="col-md-3 mb-3">
                         <label for="Pully_Ribs" onclick="changeInputState('Pully_Ribs')">
-                        <input type="checkbox" name="push" class="custom-control-input Pully_Ribs" id="prPully_Ribs" >
-                        <span class="notreq">Pully Ribs</span></label>
+                            <input type="checkbox" name="push" class="custom-control-input Pully_Ribs" id="prPully_Ribs" >
+                            <span class="notreq">Pully Ribs</span></label>
                         @if ($errors->has('Pully_Ribs'))
                         <span class="help-block">
                             <strong>{{ $errors->first('Pully_Ribs') }}</strong>
@@ -530,11 +531,11 @@
                         @endif
                         <input type="text" class="form-control " autocomplete="off" id="Pully_Ribs" name="Pully_Ribs" placeholder="Pully Ribs" disabled="disabled" >
                     </div>
-					
-					<div class="col-md-3 mb-3">
+
+                    <div class="col-md-3 mb-3">
                         <label for="Total_Length" onclick="changeInputState('Total_Length')">
-                        <input type="checkbox" name="push" class="custom-control-input Total_Length" id="prTotal_Length" >
-                        <span class="notreq">Total Length</span></label>
+                            <input type="checkbox" name="push" class="custom-control-input Total_Length" id="prTotal_Length" >
+                            <span class="notreq">Total Length</span></label>
                         @if ($errors->has('Total_Length'))
                         <span class="help-block">
                             <strong>{{ $errors->first('Total_Length') }}</strong>
@@ -542,18 +543,18 @@
                         @endif
                         <input type="text" class="form-control " autocomplete="off" id="Total_Length" name="Total_Length" placeholder="Product Total Length" disabled="disabled" >
                     </div>
-                    
-                    
-                    
+
+
+
                 </div>
-				
-		
-<div class="row mt-4">
-                    
+
+
+                <div class="row mt-4">
+
                     <div class="col-md-3 mb-3">
                         <label for="Pin" onclick="changeInputState('Pin')">
-                        <input type="checkbox" name="push" class="custom-control-input Pin" id="prPin" >
-                        <span class="notreq">Pin</span></label>
+                            <input type="checkbox" name="push" class="custom-control-input Pin" id="prPin" >
+                            <span class="notreq">Pin</span></label>
                         @if ($errors->has('Pin'))
                         <span class="help-block">
                             <strong>{{ $errors->first('Pin') }}</strong>
@@ -561,11 +562,11 @@
                         @endif
                         <input type="text" class="form-control" autocomplete="off" id="Pin" name="Pin" placeholder="Product Pin" disabled="disabled">
                     </div>
-                    
+
                     <div class="col-md-3 mb-3">
                         <label for="Fitting_position" onclick="changeInputState('Fitting_position')">
-                        <input type="checkbox" name="push" class="custom-control-input Fitting_position" id="prFitting_position" >
-                        <span class="notreq">Fitting position</span></label>
+                            <input type="checkbox" name="push" class="custom-control-input Fitting_position" id="prFitting_position" >
+                            <span class="notreq">Fitting position</span></label>
                         @if ($errors->has('Fitting_position'))
                         <span class="help-block">
                             <strong>{{ $errors->first('Fitting_position') }}</strong>
@@ -573,11 +574,11 @@
                         @endif
                         <input type="text" class="form-control " autocomplete="off" id="Fitting_position" name="Fitting_position" placeholder="Fitting position" disabled="disabled" >
                     </div>
-                    
+
                     <div class="col-md-3 mb-3">
                         <label for="No_of_Holes" onclick="changeInputState('No_of_Holes')">
-                        <input type="checkbox" name="push" class="custom-control-input No_of_Holes" id="prNo_of_Holes" >
-                        <span class="notreq">No of Holes</span></label>
+                            <input type="checkbox" name="push" class="custom-control-input No_of_Holes" id="prNo_of_Holes" >
+                            <span class="notreq">No of Holes</span></label>
                         @if ($errors->has('No_of_Holes'))
                         <span class="help-block">
                             <strong>{{ $errors->first('No_of_Holes') }}</strong>
@@ -585,11 +586,11 @@
                         @endif
                         <input type="text" class="form-control " autocomplete="off" id="No_of_Holes" name="No_of_Holes" placeholder="No of Holes" disabled="disabled" >
                     </div>
-					
-					<div class="col-md-3 mb-3">
+
+                    <div class="col-md-3 mb-3">
                         <label for="Bolt_Hole_Circle_Dia" onclick="changeInputState('Bolt_Hole_Circle_Dia')">
-                        <input type="checkbox" name="push" class="custom-control-input Bolt_Hole_Circle_Dia" id="prBolt_Hole_Circle_Dia" >
-                        <span class="notreq">Bolt Hole Circle Dia</span></label>
+                            <input type="checkbox" name="push" class="custom-control-input Bolt_Hole_Circle_Dia" id="prBolt_Hole_Circle_Dia" >
+                            <span class="notreq">Bolt Hole Circle Dia</span></label>
                         @if ($errors->has('Bolt_Hole_Circle_Dia'))
                         <span class="help-block">
                             <strong>{{ $errors->first('Bolt_Hole_Circle_Dia') }}</strong>
@@ -597,17 +598,17 @@
                         @endif
                         <input type="text" class="form-control " autocomplete="off" id="Bolt_Hole_Circle_Dia" name="Bolt_Hole_Circle_Dia" placeholder="Product Bolt Hole Circle Dia" disabled="disabled" >
                     </div>
-                    
-                    
-                    
+
+
+
                 </div>	
 
-<div class="row mt-4">
-                    
+                <div class="row mt-4">
+
                     <div class="col-md-3 mb-3">
                         <label for="Inner_Dia" onclick="changeInputState('Inner_Dia')">
-                        <input type="checkbox" name="push" class="custom-control-input Inner_Dia" id="prInner_Dia" >
-                        <span class="notreq">Inner Dia</span></label>
+                            <input type="checkbox" name="push" class="custom-control-input Inner_Dia" id="prInner_Dia" >
+                            <span class="notreq">Inner Dia</span></label>
                         @if ($errors->has('Inner_Dia'))
                         <span class="help-block">
                             <strong>{{ $errors->first('Inner_Dia') }}</strong>
@@ -615,11 +616,11 @@
                         @endif
                         <input type="text" class="form-control" autocomplete="off" id="Inner_Dia" name="Inner_Dia" placeholder="Product Inner Dia" disabled="disabled">
                     </div>
-                    
+
                     <div class="col-md-3 mb-3">
                         <label for="Outer_Dia" onclick="changeInputState('Outer_Dia')">
-                        <input type="checkbox" name="push" class="custom-control-input Outer_Dia" id="prOuter_Dia" >
-                        <span class="notreq">Outer Dia</span></label>
+                            <input type="checkbox" name="push" class="custom-control-input Outer_Dia" id="prOuter_Dia" >
+                            <span class="notreq">Outer Dia</span></label>
                         @if ($errors->has('Outer_Dia'))
                         <span class="help-block">
                             <strong>{{ $errors->first('Outer_Dia') }}</strong>
@@ -627,13 +628,13 @@
                         @endif
                         <input type="text" class="form-control " autocomplete="off" id="Outer_Dia" name="Outer_Dia" placeholder="Outer Dia" disabled="disabled" >
                     </div>
-                    
 
-                    
+
+
                     <div class="col-md-3 mb-3">
                         <label for="Teeth_wheel_side" onclick="changeInputState('Teeth_wheel_side')">
-                        <input type="checkbox" name="push" class="custom-control-input Teeth_wheel_side" id="prTeeth_wheel_side" >
-                        <span class="notreq">Teeth Wheel Side</span></label>
+                            <input type="checkbox" name="push" class="custom-control-input Teeth_wheel_side" id="prTeeth_wheel_side" >
+                            <span class="notreq">Teeth Wheel Side</span></label>
                         @if ($errors->has('Teeth_wheel_side'))
                         <span class="help-block">
                             <strong>{{ $errors->first('Teeth_wheel_side') }}</strong>
@@ -644,8 +645,8 @@
 
                     <div class="col-md-3 mb-3">
                         <label for="Teeth_Diff_Side" onclick="changeInputState('Teeth_Diff_Side')">
-                        <input type="checkbox" name="push" class="custom-control-input Teeth_Diff_Side" id="prTeeth_Diff_Side" >
-                        <span class="notreq">Teeth Diff. Side</span></label>
+                            <input type="checkbox" name="push" class="custom-control-input Teeth_Diff_Side" id="prTeeth_Diff_Side" >
+                            <span class="notreq">Teeth Diff. Side</span></label>
                         @if ($errors->has('Teeth_Diff_Side'))
                         <span class="help-block">
                             <strong>{{ $errors->first('Teeth_Diff_Side') }}</strong>
@@ -653,8 +654,105 @@
                         @endif
                         <input type="text" class="form-control " autocomplete="off" id="Teeth_Diff_Side" name="Teeth_Diff_Side" placeholder="Teeth Diff Side" disabled="disabled" >
                     </div>					
-                    
-                    
+
+
+                </div>					
+                <div class="row mt-4">
+
+                    <div class="col-md-3 mb-3">
+                        <label for="Min_Th" onclick="changeInputState('Min_Th')">
+                            <input type="checkbox" name="push" class="custom-control-input Min_Th" id="Min_Th" >
+                            <span class="notreq">Min Th</span></label>
+                        @if ($errors->has('Min_Th'))
+                        <span class="help-block">
+                            <strong>{{ $errors->first('Min_Th') }}</strong>
+                        </span>
+                        @endif
+                        <input type="text" class="form-control" autocomplete="off" id="pr_Min_Th" name="Min_Th" placeholder="Product Min Th" disabled="disabled">
+                    </div>
+
+                    <div class="col-md-3 mb-3">
+                        <label for="Max_Th" onclick="changeInputState('Max_Th')">
+                            <input type="checkbox" name="push" class="custom-control-input Max_Th" id="Max_Th" >
+                            <span class="notreq">Max Th</span></label>
+                        @if ($errors->has('Max_Th'))
+                        <span class="help-block">
+                            <strong>{{ $errors->first('Max_Th') }}</strong>
+                        </span>
+                        @endif
+                        <input type="text" class="form-control " autocomplete="off" id="pr_Max_Th" name="Max_Th" placeholder="Max Th" disabled="disabled" >
+                    </div>
+
+
+
+                    <div class="col-md-3 mb-3">
+                        <label for="Centre_Dia" onclick="changeInputState('Centre_Dia')">
+                            <input type="checkbox" name="push" class="custom-control-input Centre_Dia" id="Centre_Dia" >
+                            <span class="notreq">Centre Dia</span></label>
+                        @if ($errors->has('Centre_Dia'))
+                        <span class="help-block">
+                            <strong>{{ $errors->first('Centre_Dia') }}</strong>
+                        </span>
+                        @endif
+                        <input type="text" class="form-control " autocomplete="off" id="pr_Centre_Dia" name="Centre_Dia" placeholder="Centre Dia" disabled="disabled" >
+                    </div>	
+
+                    <div class="col-md-3 mb-3">
+                        <label for="PCD" onclick="changeInputState('PCD')">
+                            <input type="checkbox" name="push" class="custom-control-input PCD" id="PCD" >
+                            <span class="notreq">PCD</span></label>
+                        @if ($errors->has('PCD'))
+                        <span class="help-block">
+                            <strong>{{ $errors->first('PCD') }}</strong>
+                        </span>
+                        @endif
+                        <input type="text" class="form-control " autocomplete="off" id="pr_PCD" name="PCD" placeholder="PCD" disabled="disabled" >
+                    </div>					
+
+
+                </div>					
+                <div class="row mt-4">
+
+                    <div class="col-md-3 mb-3">
+                        <label for="Disc_Type" onclick="changeInputState('Disc_Type')">
+                            <input type="checkbox" name="push" class="custom-control-input Disc_Type" id="Disc_Type" >
+                            <span class="notreq">Disc Type</span></label>
+                        @if ($errors->has('Disc_Type'))
+                        <span class="help-block">
+                            <strong>{{ $errors->first('Disc_Type') }}</strong>
+                        </span>
+                        @endif
+                        <input type="text" class="form-control" autocomplete="off" id="pr_Disc_Type" name="Disc_Type" placeholder="Disc Type" disabled="disabled">
+                    </div>
+
+                    <div class="col-md-3 mb-3">
+                        <label for="Width" onclick="changeInputState('Width')">
+                            <input type="checkbox" name="push" class="custom-control-input Width" id="Width" >
+                            <span class="notreq">Width</span></label>
+                        @if ($errors->has('Width'))
+                        <span class="help-block">
+                            <strong>{{ $errors->first('Width') }}</strong>
+                        </span>
+                        @endif
+                        <input type="text" class="form-control " autocomplete="off" id="pr_Width" name="Width" placeholder="Width" disabled="disabled" >
+                    </div>
+
+
+
+                    <div class="col-md-3 mb-3">
+                        <label for="F_R" onclick="changeInputState('F_R')">
+                            <input type="checkbox" name="push" class="custom-control-input F_R" id="F_R" >
+                            <span class="notreq">F/R</span></label>
+                        @if ($errors->has('F_R'))
+                        <span class="help-block">
+                            <strong>{{ $errors->first('F_R') }}</strong>
+                        </span>
+                        @endif
+                        <input type="text" class="form-control " autocomplete="off" id="pr_F_R" name="F_R" placeholder="F/R" disabled="disabled" >
+                    </div>	
+					
+
+
                 </div>					
                 <div class="row mt-4">
 
@@ -667,7 +765,7 @@
                         @endif
                         <textarea class="form-control"  rows="10" placeholder="Description" id="mscode" name="mscode" ></textarea>
                     </div>
-                    
+
                     <div class="col-md-3 mb-3">
                         <label for="status">Status</label>
                         @if ($errors->has('prod_status'))
@@ -680,7 +778,7 @@
                             <option value="0" >Disable</option>
                         </select>
                     </div>
-                    
+
                     <div class="col-md-3 mb-3">
                         <label for="status">Latest</label>
                         @if ($errors->has('is_latest'))
@@ -706,7 +804,7 @@
                     </div>
 
                 </div>
-				<div class="row mt-4">
+                <div class="row mt-4">
                     <div class="col-md-3 mb-3 padRig" id="prod_img1"></div>
                     <div class="col-md-3 mb-3 padRig" id="prod_img2"></div>
                     <div class="col-md-3 mb-3 padRig" id="prod_img3"></div>
@@ -718,7 +816,7 @@
                     <div class="col-md-3 mb-3 padRig" id="prod_img7"></div>
                     <div class="col-md-3 mb-3 padRig" id="prod_img8"></div>
                 </div>
-                
+
                 <div class="row mt-4">
                     <div class="col-12  pb-3 clearfix"><button type="submit" class="btn btn-secondary pl-4 pr-4 pt-2 pb-2  m-0 text-uppercase" id="submitProdDesc">Submit</button></div>
                 </div>
